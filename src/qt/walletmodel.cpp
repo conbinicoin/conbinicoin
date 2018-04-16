@@ -252,7 +252,7 @@ bool WalletModel::validateZAddress(const QString &address)
 {
     bool isZaddr = false;
 
-    // Validate the passed LitecoinZ z-address
+    // Validate the passed ConbiniCoin z-address
     try {
         CZCPaymentAddress zaddr(address.toStdString());
         zaddr.Get();
@@ -310,7 +310,7 @@ WalletModel::SendCoinsReturn WalletModel::prepareTransaction(WalletModelTransact
             total += subtotal;
         }
         else
-        {   // User-entered litecoinz address / amount:
+        {   // User-entered conbinicoin address / amount:
             if(!validateAddress(rcp.address))
             {
                 return InvalidAddress;
@@ -414,7 +414,7 @@ WalletModel::SendCoinsReturn WalletModel::prepareZTransaction(WalletModelTransac
             total += subtotal;
         }
         else
-        {   // User-entered litecoinz address / amount:
+        {   // User-entered conbinicoin address / amount:
             if((!validateAddress(rcp.address)) && (!validateZAddress(rcp.address)))
             {
                 return InvalidAddress;
@@ -478,7 +478,7 @@ WalletModel::SendCoinsReturn WalletModel::sendCoins(WalletModelTransaction &tran
                 rcp.paymentRequest.SerializeToString(&value);
                 newTx->vOrderForm.push_back(make_pair(key, value));
             }
-            else if (!rcp.message.isEmpty()) // Message from normal litecoinz:URI (litecoinz:123...?message=example)
+            else if (!rcp.message.isEmpty()) // Message from normal conbinicoin:URI (conbinicoin:123...?message=example)
                 newTx->vOrderForm.push_back(make_pair("Message", rcp.message.toStdString()));
         }
 

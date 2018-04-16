@@ -8,7 +8,7 @@
 from test_framework.test_framework import BitcoinTestFramework
 from test_framework.util import assert_equal, initialize_chain_clean, \
     initialize_datadir, start_nodes, start_node, connect_nodes_bi, \
-    litecoinzd_processes, wait_and_assert_operationid_status
+    conbinicoind_processes, wait_and_assert_operationid_status
 
 from decimal import Decimal
 
@@ -34,7 +34,7 @@ class Wallet1941RegressionTest (BitcoinTestFramework):
 
     def restart_second_node(self, extra_args=[]):
         self.nodes[1].stop()
-        litecoinzd_processes[1].wait()
+        conbinicoind_processes[1].wait()
         self.nodes[1] = start_node(1, self.options.tmpdir, extra_args=['-regtestprotectcoinbase','-debug=zrpc'] + extra_args)
         self.nodes[1].setmocktime(starttime + 9000)
         connect_nodes_bi(self.nodes, 0, 1)

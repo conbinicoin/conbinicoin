@@ -20,7 +20,7 @@ public:
     State validate(QString &input, int &pos) const;
 };
 
-/** LitecoinZ address widget validator, checks for a valid litecoinz address.
+/** ConbiniCoin address widget validator, checks for a valid conbinicoin address.
  */
 class BitcoinAddressCheckValidator : public QValidator
 {

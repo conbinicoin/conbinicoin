@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin Core developers
-// Copyright (c) 2017-2018 The LitecoinZ developers
+// Copyright (c) 2017-2018 The LitecoinZ and ConbiniCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -44,7 +44,7 @@
 using namespace std;
 
 #if defined(NDEBUG)
-# error "LitecoinZ cannot be compiled without assertions."
+# error "ConbiniCoin cannot be compiled without assertions."
 #endif
 
 /**
@@ -97,7 +97,7 @@ static void CheckBlockIndex();
 /** Constant stuff for coinbase transactions we create: */
 CScript COINBASE_FLAGS;
 
-const string strMessageMagic = "LitecoinZ Signed Message:\n";
+const string strMessageMagic = "ConbiniCoin Signed Message:\n";
 
 // Internal stuff
 namespace {
@@ -1403,7 +1403,7 @@ bool ReadBlockFromDisk(CBlock& block, const CBlockIndex* pindex)
 
 CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
 {
-    CAmount nSubsidy = 50 * COIN;
+    CAmount nSubsidy = 25 * COIN;
     int halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
 
     // Force block reward to zero when right shift is undefined.
@@ -1966,7 +1966,7 @@ bool FindUndoPos(CValidationState &state, int nFile, CDiskBlockPos &pos, unsigne
 static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck() {
-    RenameThread("litecoinz-scriptch");
+    RenameThread("conbinicoin-scriptch");
     scriptcheckqueue.Thread();
 }
 
@@ -3120,7 +3120,7 @@ bool ContextualCheckBlock(const CBlock& block, CValidationState& state, CBlockIn
     }
 
     // Enforce BIP 34 rule that the coinbase starts with serialized block height.
-    // In LitecoinZ this has been enforced since launch, except that the genesis
+    // In ConbiniCoin this has been enforced since launch, except that the genesis
     // block didn't include the height in the coinbase (see Zcash protocol spec
     // section '6.8 Bitcoin Improvement Proposals').
     if (nHeight > 0)

@@ -103,7 +103,7 @@
     </message>
     <message>
         <source>Show information about Qt</source>
-        <translation>Erakutsi LitecoinZ-i buruzko informazioa</translation>
+        <translation>Erakutsi ConbiniCoin-i buruzko informazioa</translation>
     </message>
     <message>
         <source>&amp;Options...</source>

@@ -1,7 +1,7 @@
-# LitecoinZ CI workers
+# ConbiniCoin CI workers
 
 This folder contains the Ansible playbooks for configuring a fresh OS
-installation for use as a Buildbot worker in LitecoinZ's CI.
+installation for use as a Buildbot worker in ConbiniCoin's CI.
 
 # Criteria for Adding Workers
 
@@ -19,13 +19,13 @@ c. When adding workers start by adding workers for the "most common"
 
 # Setting up a latent worker on Amazon EC2
 
-- Add a regular (non-latent) worker to the master.cfg for dev-ci.litecoinz.info, and
+- Add a regular (non-latent) worker to the master.cfg for dev-ci.conbinicoin.com, and
   deploy the changes.
   - This enables the Ansible playbook to run to completion, ending in the worker
     connecting to the master.
 
 - Start a basic EC2 instance using the template AMI for the target OS.
-  - Choose the smallest instance size, it won't be used for building LitecoinZ.
+  - Choose the smallest instance size, it won't be used for building ConbiniCoin.
 
 - Figure out which user to log into the instance with.
   - E.g. for the Ubuntu template, use "ubuntu" instead of "root"
@@ -37,22 +37,22 @@ c. When adding workers start by adding workers for the "most common"
 
 - Create `inventory/hosts` containing the following:
 
-    [litecoinz-ci-worker-unix]
+    [conbinicoin-ci-worker-unix]
     some-name ansible_host=<INSTANCE_IP> ansible_ssh_user=<USERNAME>
 
 - Run `ansible-playbook -e buildbot_worker_host_template=templates/host.ec2.j2 -i inventory/hosts unix.yml`,
   passing in the worker's Buildbot name and password.
-  - After a successful run, the worker should be connected to dev-ci.litecoinz.info and
+  - After a successful run, the worker should be connected to dev-ci.conbinicoin.com and
     visible in its worker list.
 
 - Create an AMI from the instance. This is the worker AMI to put into the
-  master.cfg for dev-ci.litecoinz.info.
+  master.cfg for dev-ci.conbinicoin.com.
   - 16 GB of storage should be sufficient.
 
-- SSH into the instance, and edit the worker config to connect to ci.litecoinz.info.
+- SSH into the instance, and edit the worker config to connect to ci.conbinicoin.com.
 
 - Create an AMI from the instance. This is the worker AMI to put into the
-  master.cfg for ci.litecoinz.info.
+  master.cfg for ci.conbinicoin.com.
   - 16 GB of storage should be sufficient.
 
 - Delete the instance (it is no longer needed).

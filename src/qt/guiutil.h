@@ -29,7 +29,7 @@ class QUrl;
 class QWidget;
 QT_END_NAMESPACE
 
-/** Utility functions used by the LitecoinZ Qt UI.
+/** Utility functions used by the ConbiniCoin Qt UI.
  */
 namespace GUIUtil
 {
@@ -45,7 +45,7 @@ namespace GUIUtil
     void setupZAddressWidget(QValidatedLineEdit *widget, QWidget *parent);
     void setupAmountWidget(QLineEdit *widget, QWidget *parent);
 
-    // Parse "litecoinz:" URI into recipient object, return true on successful parsing
+    // Parse "conbinicoin:" URI into recipient object, return true on successful parsing
     bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out);
     bool parseBitcoinURI(QString uri, SendCoinsRecipient *out);
     QString formatBitcoinURI(const SendCoinsRecipient &info);

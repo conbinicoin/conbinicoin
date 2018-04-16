@@ -1,35 +1,35 @@
-// Copyright (c) 2017-2018 The LitecoinZ developers
+// Copyright (c) 2017-2018 The LitecoinZ and ConbiniCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_QT_LITECOINZADDRESSVALIDATOR_H
-#define BITCOIN_QT_LITECOINZADDRESSVALIDATOR_H
+#ifndef BITCOIN_QT_CONBINICOINADDRESSVALIDATOR_H
+#define BITCOIN_QT_CONBINICOINADDRESSVALIDATOR_H
 
 #include <QValidator>
 
 /** Base58 entry widget validator, checks for valid characters and
  * removes some whitespace.
  */
-class LitecoinZAddressEntryValidator : public QValidator
+class ConbiniCoinAddressEntryValidator : public QValidator
 {
     Q_OBJECT
 
 public:
-    explicit LitecoinZAddressEntryValidator(QObject *parent);
+    explicit ConbiniCoinAddressEntryValidator(QObject *parent);
 
     State validate(QString &input, int &pos) const;
 };
 
-/** LitecoinZ address widget validator, checks for a valid litecoinz address.
+/** ConbiniCoin address widget validator, checks for a valid conbinicoin address.
  */
-class LitecoinZAddressCheckValidator : public QValidator
+class ConbiniCoinAddressCheckValidator : public QValidator
 {
     Q_OBJECT
 
 public:
-    explicit LitecoinZAddressCheckValidator(QObject *parent);
+    explicit ConbiniCoinAddressCheckValidator(QObject *parent);
 
     State validate(QString &input, int &pos) const;
 };
 
-#endif // BITCOIN_QT_LITECOINZADDRESSVALIDATOR_H
+#endif // BITCOIN_QT_CONBINICOINADDRESSVALIDATOR_H

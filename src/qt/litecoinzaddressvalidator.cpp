@@ -1,8 +1,8 @@
-// Copyright (c) 2017-2018 The LitecoinZ developers
+// Copyright (c) 2017-2018 The LitecoinZ and ConbiniCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "litecoinzaddressvalidator.h"
+#include "conbinicoinaddressvalidator.h"
 
 #include "base58.h"
 
@@ -15,12 +15,12 @@
   - All lower-case letters except for 'l'
 */
 
-LitecoinZAddressEntryValidator::LitecoinZAddressEntryValidator(QObject *parent) :
+ConbiniCoinAddressEntryValidator::ConbiniCoinAddressEntryValidator(QObject *parent) :
     QValidator(parent)
 {
 }
 
-QValidator::State LitecoinZAddressEntryValidator::validate(QString &input, int &pos) const
+QValidator::State ConbiniCoinAddressEntryValidator::validate(QString &input, int &pos) const
 {
     Q_UNUSED(pos);
 
@@ -80,17 +80,17 @@ QValidator::State LitecoinZAddressEntryValidator::validate(QString &input, int &
     return state;
 }
 
-LitecoinZAddressCheckValidator::LitecoinZAddressCheckValidator(QObject *parent) :
+ConbiniCoinAddressCheckValidator::ConbiniCoinAddressCheckValidator(QObject *parent) :
     QValidator(parent)
 {
 }
 
-QValidator::State LitecoinZAddressCheckValidator::validate(QString &input, int &pos) const
+QValidator::State ConbiniCoinAddressCheckValidator::validate(QString &input, int &pos) const
 {
     Q_UNUSED(pos);
     bool isZaddr = false;
 
-    // Validate the passed LitecoinZ z-address
+    // Validate the passed ConbiniCoin z-address
     try {
         CZCPaymentAddress zaddr(input.toStdString());
         zaddr.Get();

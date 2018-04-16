@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2014 The Bitcoin Core developers
 // Copyright (c) 2017 The Zcash developers
-// Copyright (c) 2017-2018 The LitecoinZ developers
+// Copyright (c) 2017-2018 The LitecoinZ and ConbiniCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -27,12 +27,12 @@ bool CPubKey::Verify(const uint256 &hash, const std::vector<unsigned char>& vchS
     if (vchSig.size() == 0) {
         return false;
     }
-    /* LitecoinZ, unlike Bitcoin, has always enforced strict DER signatures. */
+    /* ConbiniCoin, unlike Bitcoin, has always enforced strict DER signatures. */
     if (!secp256k1_ecdsa_signature_parse_der(secp256k1_context_verify, &sig, &vchSig[0], vchSig.size())) {
         return false;
     }
     /* libsecp256k1's ECDSA verification requires lower-S signatures, which have
-     * not historically been enforced in Bitcoin or LitecoinZ, so normalize them first. */
+     * not historically been enforced in Bitcoin or ConbiniCoin, so normalize them first. */
     secp256k1_ecdsa_signature_normalize(secp256k1_context_verify, &sig, &sig);
     return secp256k1_ecdsa_verify(secp256k1_context_verify, &sig, hash.begin(), &pubkey);
 }
@@ -128,7 +128,7 @@ bool CExtPubKey::Derive(CExtPubKey &out, unsigned int nChild) const {
 /* static */ bool CPubKey::CheckLowS(const std::vector<unsigned char>& vchSig) {
     secp256k1_ecdsa_signature sig;
 
-    /* LitecoinZ, unlike Bitcoin, has always enforced strict DER signatures. */
+    /* ConbiniCoin, unlike Bitcoin, has always enforced strict DER signatures. */
     if (!secp256k1_ecdsa_signature_parse_der(secp256k1_context_verify, &sig, &vchSig[0], vchSig.size())) {
         return false;
     }

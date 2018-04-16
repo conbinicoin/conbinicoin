@@ -154,8 +154,8 @@
         <translation>Mengindex ulang blok di dalam disk...</translation>
     </message>
     <message>
-        <source>Send coins to a LitecoinZ address</source>
-        <translation>Kirim koin ke alamat LitecoinZ</translation>
+        <source>Send coins to a ConbiniCoin address</source>
+        <translation>Kirim koin ke alamat ConbiniCoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -178,8 +178,8 @@
         <translation>&amp;Verifikasi pesan...</translation>
     </message>
     <message>
-        <source>LitecoinZ</source>
-        <translation>LitecoinZ</translation>
+        <source>ConbiniCoin</source>
+        <translation>ConbiniCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -206,12 +206,12 @@
         <translation>Enkripsi private key yang dimiliki dompet Anda</translation>
     </message>
     <message>
-        <source>Sign messages with your LitecoinZ addresses to prove you own them</source>
-        <translation>Tanda tangani sebuah pesan menggunakan alamat LitecoinZ Anda untuk membuktikan bahwa Anda adalah pemilik alamat tersebut</translation>
+        <source>Sign messages with your ConbiniCoin addresses to prove you own them</source>
+        <translation>Tanda tangani sebuah pesan menggunakan alamat ConbiniCoin Anda untuk membuktikan bahwa Anda adalah pemilik alamat tersebut</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified LitecoinZ addresses</source>
-        <translation>Verifikasi pesan untuk memastikan bahwa pesan tersebut ditanda tangani oleh suatu alamat LitecoinZ tertentu</translation>
+        <source>Verify messages to ensure they were signed with specified ConbiniCoin addresses</source>
+        <translation>Verifikasi pesan untuk memastikan bahwa pesan tersebut ditanda tangani oleh suatu alamat ConbiniCoin tertentu</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -230,8 +230,8 @@
         <translation>Baris tab</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and litecoinz: URIs)</source>
-        <translation>Permintaan pembayaran (membuat kode QR dan litecoinz: URIs)</translation>
+        <source>Request payments (generates QR codes and conbinicoin: URIs)</source>
+        <translation>Permintaan pembayaran (membuat kode QR dan conbinicoin: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -242,16 +242,16 @@
         <translation>Tampilkan daftar alamat dan label yang diterima</translation>
     </message>
     <message>
-        <source>Open a litecoinz: URI or payment request</source>
-        <translation>Buka URI litecoinz: atau permintaan pembayaran</translation>
+        <source>Open a conbinicoin: URI or payment request</source>
+        <translation>Buka URI conbinicoin: atau permintaan pembayaran</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;pilihan Command-line</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to LitecoinZ network</source>
-        <translation><numerusform>%n koneksi aktif ke jaringan LitecoinZ</numerusform></translation>
+        <source>%n active connection(s) to ConbiniCoin network</source>
+        <translation><numerusform>%n koneksi aktif ke jaringan ConbiniCoin</numerusform></translation>
     </message>
     <message>
         <source>No block source available...</source>
@@ -669,16 +669,16 @@
         <translation>&amp;Perubahan saldo untuk transaksi yang belum dikonfirmasi</translation>
     </message>
     <message>
-        <source>Automatically open the LitecoinZ client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Otomatis membuka port client LitecoinZ di router. Hanya berjalan apabila router anda mendukung UPnP dan di-enable.</translation>
+        <source>Automatically open the ConbiniCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Otomatis membuka port client ConbiniCoin di router. Hanya berjalan apabila router anda mendukung UPnP dan di-enable.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Petakan port dengan &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the LitecoinZ network through a SOCKS5 proxy.</source>
-        <translation>Hubungkan ke jaringan LitecoinZ melalui SOCKS5 proxy.</translation>
+        <source>Connect to the ConbiniCoin network through a SOCKS5 proxy.</source>
+        <translation>Hubungkan ke jaringan ConbiniCoin melalui SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -784,8 +784,8 @@
         <translation>Formulir</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the LitecoinZ network after a connection is established, but this process has not completed yet.</source>
-        <translation>Informasi terlampir mungkin sudah kedaluwarsa. Dompet Anda secara otomatis mensinkronisasi dengan jaringan LitecoinZ ketika sebuah hubungan terbentuk, namun proses ini belum selesai.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the ConbiniCoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Informasi terlampir mungkin sudah kedaluwarsa. Dompet Anda secara otomatis mensinkronisasi dengan jaringan ConbiniCoin ketika sebuah hubungan terbentuk, namun proses ini belum selesai.</translation>
     </message>
     <message>
         <source>Available (T+Z):</source>
@@ -841,8 +841,8 @@
         <translation>Nilai</translation>
     </message>
     <message>
-        <source>Enter a LitecoinZ address (e.g. %1)</source>
-        <translation>Masukkan alamat LitecoinZ (contoh %1)</translation>
+        <source>Enter a ConbiniCoin address (e.g. %1)</source>
+        <translation>Masukkan alamat ConbiniCoin (contoh %1)</translation>
     </message>
     <message>
         <source>%1 h</source>
@@ -1317,8 +1317,8 @@
         <translation>Salin tanda tangan terpilih ke sistem klipboard</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this LitecoinZ address</source>
-        <translation>Tandai pesan untuk menyetujui kamu pemiliki alamat LitecoinZ ini</translation>
+        <source>Sign the message to prove you own this ConbiniCoin address</source>
+        <translation>Tandai pesan untuk menyetujui kamu pemiliki alamat ConbiniCoin ini</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1418,8 +1418,8 @@
         <translation>Terima hubungan dari luar (standar: 1 kalau -proxy atau -connect tidak dipilih)</translation>
     </message>
     <message>
-        <source>LitecoinZ Core</source>
-        <translation>LitecoinZ Core</translation>
+        <source>ConbiniCoin Core</source>
+        <translation>ConbiniCoin Core</translation>
     </message>
     <message>
         <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>

@@ -1,13 +1,13 @@
 #!/usr/bin/env python2
 # Copyright (c) 2014 The Bitcoin Core developers
-# Copyright (c) 2017-2018 The LitecoinZ developers
+# Copyright (c) 2017-2018 The LitecoinZ and ConbiniCoin developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 from test_framework.test_framework import BitcoinTestFramework
 from test_framework.authproxy import JSONRPCException
 from test_framework.util import assert_equal, initialize_chain_clean, \
-    start_nodes, start_node, connect_nodes_bi, litecoinzd_processes
+    start_nodes, start_node, connect_nodes_bi, conbinicoind_processes
 
 
 class ZapWalletTXesTest (BitcoinTestFramework):
@@ -54,18 +54,18 @@ class ZapWalletTXesTest (BitcoinTestFramework):
         tx3 = self.nodes[0].gettransaction(txid3)
         assert_equal(tx3['txid'], txid3) # tx3 must be available (unconfirmed)
 
-        # restart litecoinzd
+        # restart conbinicoind
         self.nodes[0].stop()
-        litecoinzd_processes[0].wait()
+        conbinicoind_processes[0].wait()
         self.nodes[0] = start_node(0,self.options.tmpdir)
 
         tx3 = self.nodes[0].gettransaction(txid3)
         assert_equal(tx3['txid'], txid3) # tx must be available (unconfirmed)
 
         self.nodes[0].stop()
-        litecoinzd_processes[0].wait()
+        conbinicoind_processes[0].wait()
 
-        # restart litecoinzd with zapwallettxes
+        # restart conbinicoind with zapwallettxes
         self.nodes[0] = start_node(0,self.options.tmpdir, ["-zapwallettxes=1"])
 
         aException = False

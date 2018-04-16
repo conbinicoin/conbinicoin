@@ -27,7 +27,7 @@ QT_BEGIN_NAMESPACE
 class QModelIndex;
 QT_END_NAMESPACE
 
-/** Dialog for requesting payment of litecoinzs */
+/** Dialog for requesting payment of conbinicoins */
 class ReceiveCoinsDialog : public QDialog
 {
     Q_OBJECT

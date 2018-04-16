@@ -1,4 +1,4 @@
-// Copyright (c) 2017-2018 The LitecoinZ developers
+// Copyright (c) 2017-2018 The LitecoinZ and ConbiniCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -20,7 +20,7 @@
 
 #include <boost/filesystem.hpp>
 
-void LTZ_VerifyParams(std::string file, std::string sha256expected)
+void CONBINI_VerifyParams(std::string file, std::string sha256expected)
 {
     unsigned char buffer[BUFSIZ];
     FILE *fp;
@@ -70,7 +70,7 @@ void LTZ_VerifyParams(std::string file, std::string sha256expected)
     }
 }
 
-void LTZ_FetchParams(std::string url, std::string file)
+void CONBINI_FetchParams(std::string url, std::string file)
 {
     CURL *curl;
     FILE *fp;

@@ -2,14 +2,14 @@
 *.deb
 *.exe
 
-src/litecoinzd
-src/litecoinz-cli
-src/litecoinz-gtest
-src/litecoinz-tx
-src/litecoinz-addrgen
+src/conbinicoind
+src/conbinicoin-cli
+src/conbinicoin-gtest
+src/conbinicoin-tx
+src/conbinicoin-addrgen
 src/test/test_bitcoin
 src/test/test_bitcoin_fuzzy
-src/qt/test/test_litecoinz-qt
+src/qt/test/test_conbinicoin-qt
 
 # Zcash utilities
 src/zcash/GenerateParams
@@ -92,14 +92,14 @@ src/qt/bitcoin-qt.includes
 # Compilation and Qt preprocessor part
 *.qm
 Makefile
-litecoinz-qt
-LitecoinZ-Qt.app
+conbinicoin-qt
+ConbiniCoin-Qt.app
 Litecoinz-Qt.app
 background.tiff*
 
 # Unit-tests
 Makefile.test
-litecoinz-qt_test
+conbinicoin-qt_test
 src/test/buildenv.py
 
 # Resources cpp
@@ -124,7 +124,7 @@ linux-build
 win32-build
 test/config.ini
 test/cache/*
-qa/pull-tester/run-litecoinzd-for-test.sh
+qa/pull-tester/run-conbinicoind-for-test.sh
 qa/pull-tester/tests-config.sh
 qa/pull-tester/cache/*
 qa/pull-tester/test.*/*
@@ -137,3 +137,5 @@ libzcashconsensus.pc
 
 contrib/debian/files
 contrib/debian/substvars
+
+.idea

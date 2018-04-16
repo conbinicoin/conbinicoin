@@ -1,6 +1,6 @@
 #!/usr/bin/env python2
 #
-# Execute all of the automated tests related to LitecoinZ.
+# Execute all of the automated tests related to ConbiniCoin.
 #
 
 import argparse
@@ -31,7 +31,7 @@ RE_FORTIFY_USED = re.compile('Binary compiled with FORTIFY_SOURCE support.*Yes')
 
 def test_rpath_runpath(filename):
     output = subprocess.check_output(
-        [repofile('qa/litecoinz/checksec.sh'), '--file', repofile(filename)]
+        [repofile('qa/conbinicoin/checksec.sh'), '--file', repofile(filename)]
     )
     if RE_RPATH_RUNPATH.search(output):
         print('PASS: %s has no RPATH or RUNPATH.' % filename)
@@ -43,7 +43,7 @@ def test_rpath_runpath(filename):
 
 def test_fortify_source(filename):
     proc = subprocess.Popen(
-        [repofile('qa/litecoinz/checksec.sh'), '--fortify-file', repofile(filename)],
+        [repofile('qa/conbinicoin/checksec.sh'), '--fortify-file', repofile(filename)],
         stdout=subprocess.PIPE,
     )
     line1 = proc.stdout.readline()
@@ -62,19 +62,19 @@ def check_security_hardening():
     # PIE, RELRO, Canary, and NX are tested by make check-security.
     ret &= subprocess.call(['make', '-C', repofile('src'), 'check-security']) == 0
 
-    ret &= test_rpath_runpath('src/litecoinzd')
-    ret &= test_rpath_runpath('src/litecoinz-cli')
-    ret &= test_rpath_runpath('src/litecoinz-gtest')
-    ret &= test_rpath_runpath('src/litecoinz-tx')
+    ret &= test_rpath_runpath('src/conbinicoind')
+    ret &= test_rpath_runpath('src/conbinicoin-cli')
+    ret &= test_rpath_runpath('src/conbinicoin-gtest')
+    ret &= test_rpath_runpath('src/conbinicoin-tx')
     ret &= test_rpath_runpath('src/test/test_bitcoin')
     ret &= test_rpath_runpath('src/zcash/GenerateParams')
 
     # NOTE: checksec.sh does not reliably determine whether FORTIFY_SOURCE
     # is enabled for the entire binary. See issue #915.
-    ret &= test_fortify_source('src/litecoinzd')
-    ret &= test_fortify_source('src/litecoinz-cli')
-    ret &= test_fortify_source('src/litecoinz-gtest')
-    ret &= test_fortify_source('src/litecoinz-tx')
+    ret &= test_fortify_source('src/conbinicoind')
+    ret &= test_fortify_source('src/conbinicoin-cli')
+    ret &= test_fortify_source('src/conbinicoin-gtest')
+    ret &= test_fortify_source('src/conbinicoin-tx')
     ret &= test_fortify_source('src/test/test_bitcoin')
     ret &= test_fortify_source('src/zcash/GenerateParams')
 
@@ -137,7 +137,7 @@ STAGES = [
 
 STAGE_COMMANDS = {
     'btest': [repofile('src/test/test_bitcoin'), '-p'],
-    'gtest': [repofile('src/litecoinz-gtest')],
+    'gtest': [repofile('src/conbinicoin-gtest')],
     'sec-hard': check_security_hardening,
     'no-dot-so': ensure_no_dot_so_in_depends,
     'util-test': util_test,

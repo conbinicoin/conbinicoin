@@ -16,5 +16,5 @@ Changelog
 * cd1abb4 Fix version info
 * 696fe74 Fix compilation issue on Debian 8.10
 * 3b83311 Rollback commit #ee88cfb due an incompatibility with z-nomp payment processor
-* 9e6d83b Merge pull request #12 from litecoinz-project/v1.0.15
+* 9e6d83b Merge pull request #12 from conbinicoin-project/v1.0.15
 * 1adbc2b Fix compilation issue on Ubuntu/Debian

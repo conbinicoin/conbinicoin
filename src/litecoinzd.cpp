@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2013 The Bitcoin Core developers
-// Copyright (c) 2017-2018 The LitecoinZ developers
+// Copyright (c) 2017-2018 The LitecoinZ and ConbiniCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -74,7 +74,7 @@ bool AppInit(int argc, char* argv[])
     // Process help and version before taking care about datadir
     if (mapArgs.count("-?") || mapArgs.count("-h") ||  mapArgs.count("-help") || mapArgs.count("-version"))
     {
-        std::string strUsage = _("LitecoinZ Daemon") + " " + _("version") + " " + FormatFullVersion() + "\n";
+        std::string strUsage = _("ConbiniCoin Daemon") + " " + _("version") + " " + FormatFullVersion() + "\n";
 
         if (mapArgs.count("-version"))
         {
@@ -83,9 +83,9 @@ bool AppInit(int argc, char* argv[])
         else
         {
             strUsage += "\n" + _("Usage:") + "\n" +
-                  "  litecoinzd [options]                     " + _("Start LitecoinZ Daemon") + "\n";
+                  "  conbinicoind [options]                     " + _("Start ConbiniCoin Daemon") + "\n";
 
-            strUsage += "\n" + HelpMessage(HMM_LITECOINZD);
+            strUsage += "\n" + HelpMessage(HMM_CONBINICOIND);
         }
 
         fprintf(stdout, "%s", strUsage.c_str());
@@ -117,19 +117,19 @@ bool AppInit(int argc, char* argv[])
         // Command-line RPC
         bool fCommandLine = false;
         for (int i = 1; i < argc; i++)
-            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "litecoinz:"))
+            if (!IsSwitchChar(argv[i][0]) && !boost::algorithm::istarts_with(argv[i], "conbinicoin:"))
                 fCommandLine = true;
 
         if (fCommandLine)
         {
-            fprintf(stderr, "Error: There is no RPC client functionality in litecoinzd. Use the litecoinz-cli utility instead.\n");
+            fprintf(stderr, "Error: There is no RPC client functionality in conbinicoind. Use the conbinicoin-cli utility instead.\n");
             exit(1);
         }
 #ifndef WIN32
         fDaemon = GetBoolArg("-daemon", false);
         if (fDaemon)
         {
-            fprintf(stdout, "LitecoinZ server starting\n");
+            fprintf(stdout, "ConbiniCoin server starting\n");
 
             // Daemonize
             pid_t pid = fork();
@@ -180,7 +180,7 @@ int main(int argc, char* argv[])
 {
     SetupEnvironment();
 
-    // Connect litecoinzd signal handlers
+    // Connect conbinicoind signal handlers
     noui_connect();
 
     return (AppInit(argc, argv) ? 0 : 1);

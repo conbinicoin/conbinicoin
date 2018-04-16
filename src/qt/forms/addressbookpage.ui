@@ -52,7 +52,7 @@
           <item>
            <widget class="QLabel" name="labelExplanation_1">
             <property name="text">
-             <string>These are your LitecoinZ private addresses for shielding coins.</string>
+             <string>These are your ConbiniCoin private addresses for shielding coins.</string>
             </property>
             <property name="textFormat">
              <enum>Qt::PlainText</enum>
@@ -301,7 +301,7 @@
           <item>
            <widget class="QLabel" name="labelExplanation_3">
             <property name="text">
-             <string>These are your LitecoinZ addresses for sending payments. Always check the amount and the receiving address before sending coins.</string>
+             <string>These are your ConbiniCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</string>
             </property>
             <property name="textFormat">
              <enum>Qt::PlainText</enum>

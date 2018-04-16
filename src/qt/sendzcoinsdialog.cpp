@@ -569,9 +569,9 @@ void SendZCoinsDialog::coinSelectionButtonClicked()
     {
         inputAddress = dlg.getReturnAddress();
         QString returnAmount = BitcoinUnits::removeSpaces(dlg.getReturnAmount());
-        if (model->getOptionsModel()->getDisplayUnit() == BitcoinUnits::uLTZ)
+        if (model->getOptionsModel()->getDisplayUnit() == BitcoinUnits::uCONBINI)
             inputAmount = AmountFromValue(returnAmount.toStdString()) / 1000000;
-        else if (model->getOptionsModel()->getDisplayUnit() == BitcoinUnits::mLTZ)
+        else if (model->getOptionsModel()->getDisplayUnit() == BitcoinUnits::mCONBINI)
             inputAmount = AmountFromValue(returnAmount.toStdString()) / 1000;
         else
             inputAmount = AmountFromValue(returnAmount.toStdString());
@@ -678,7 +678,7 @@ void SendZCoinsDialog::updateLabels()
         nAfterFee = 0;
 
     // actually update labels
-    int nDisplayUnit = BitcoinUnits::LTZ;
+    int nDisplayUnit = BitcoinUnits::CONBINI;
     if (model && model->getOptionsModel())
         nDisplayUnit = model->getOptionsModel()->getDisplayUnit();
 

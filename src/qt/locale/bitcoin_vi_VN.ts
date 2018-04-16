@@ -166,8 +166,8 @@
         <translation>Đánh chỉ số (indexing) lại các khối (blocks) trên ổ đĩa ...</translation>
     </message>
     <message>
-        <source>Send coins to a LitecoinZ address</source>
-        <translation>Gửi coins đến tài khoản LitecoinZ</translation>
+        <source>Send coins to a ConbiniCoin address</source>
+        <translation>Gửi coins đến tài khoản ConbiniCoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -186,8 +186,8 @@
         <translation>&amp;Tin nhắn xác thực</translation>
     </message>
     <message>
-        <source>LitecoinZ</source>
-        <translation>LitecoinZ</translation>
+        <source>ConbiniCoin</source>
+        <translation>ConbiniCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -214,12 +214,12 @@
         <translation>Mã hoá các khoá bí mật trong Ví của bạn.</translation>
     </message>
     <message>
-        <source>Sign messages with your LitecoinZ addresses to prove you own them</source>
-        <translation>Dùng địa chỉ LitecoinZ của bạn ký các tin nhắn để xác minh những nội dung tin nhắn đó là của bạn.</translation>
+        <source>Sign messages with your ConbiniCoin addresses to prove you own them</source>
+        <translation>Dùng địa chỉ ConbiniCoin của bạn ký các tin nhắn để xác minh những nội dung tin nhắn đó là của bạn.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified LitecoinZ addresses</source>
-        <translation>Kiểm tra các tin nhắn để chắc chắn rằng chúng được ký bằng các địa chỉ LitecoinZ xác định.</translation>
+        <source>Verify messages to ensure they were signed with specified ConbiniCoin addresses</source>
+        <translation>Kiểm tra các tin nhắn để chắc chắn rằng chúng được ký bằng các địa chỉ ConbiniCoin xác định.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -238,8 +238,8 @@
         <translation>Thanh công cụ (toolbar)</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and litecoinz: URIs)</source>
-        <translation>Yêu cầu thanh toán(tạo mã QR và địa chỉ LitecoinZ: URLs)</translation>
+        <source>Request payments (generates QR codes and conbinicoin: URIs)</source>
+        <translation>Yêu cầu thanh toán(tạo mã QR và địa chỉ ConbiniCoin: URLs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -250,8 +250,8 @@
         <translation>Hiện thỉ danh sách các địa chỉ và nhãn đã dùng để nhận.</translation>
     </message>
     <message>
-        <source>Open a litecoinz: URI or payment request</source>
-        <translation>Mở litecoinz:URL hoặc yêu cầu thanh toán</translation>
+        <source>Open a conbinicoin: URI or payment request</source>
+        <translation>Mở conbinicoin:URL hoặc yêu cầu thanh toán</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -533,8 +533,8 @@
         <translation>Ví</translation>
     </message>
     <message>
-        <source>Connect to the LitecoinZ network through a SOCKS5 proxy.</source>
-        <translation>Kết nối đến máy chủ LitecoinZ thông qua SOCKS5 proxy.</translation>
+        <source>Connect to the ConbiniCoin network through a SOCKS5 proxy.</source>
+        <translation>Kết nối đến máy chủ ConbiniCoin thông qua SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -1008,8 +1008,8 @@
         <translation>Lựa chọn:</translation>
     </message>
     <message>
-        <source>LitecoinZ Core</source>
-        <translation>LitecoinZ Core</translation>
+        <source>ConbiniCoin Core</source>
+        <translation>ConbiniCoin Core</translation>
     </message>
     <message>
         <source>(default: %u)</source>

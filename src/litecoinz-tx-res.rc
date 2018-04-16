@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "LitecoinZ"
-            VALUE "FileDescription",    "litecoinz-tx (CLI LitecoinZ transaction editor utility)"
+            VALUE "CompanyName",        "ConbiniCoin"
+            VALUE "FileDescription",    "conbinicoin-tx (CLI ConbiniCoin transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "litecoinz-tx"
+            VALUE "InternalName",       "conbinicoin-tx"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "litecoinz-tx.exe"
-            VALUE "ProductName",        "litecoinz-tx"
+            VALUE "OriginalFilename",   "conbinicoin-tx.exe"
+            VALUE "ProductName",        "conbinicoin-tx"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

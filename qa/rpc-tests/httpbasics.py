@@ -1,6 +1,6 @@
 #!/usr/bin/env python2
 # Copyright (c) 2014 The Bitcoin Core developers
-# Copyright (c) 2017-2018 The LitecoinZ developers
+# Copyright (c) 2017-2018 The LitecoinZ and ConbiniCoin developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -97,7 +97,7 @@ class HTTPBasicsTest (BitcoinTestFramework):
         conn.request('POST', '/', '{"method": "getbestblockhash"}', headers)
         out1 = conn.getresponse().read()
         assert_equal('"error":null' in out1, True)
-        assert_equal(conn.sock!=None, True) # connection must be closed because litecoinzd should use keep-alive by default
+        assert_equal(conn.sock!=None, True) # connection must be closed because conbinicoind should use keep-alive by default
 
 if __name__ == '__main__':
     HTTPBasicsTest().main()

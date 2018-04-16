@@ -28,7 +28,7 @@ using namespace std;
 
 /*
     To run tests:
-    ./litecoinz-gtest --gtest_filter="paymentdisclosure.*"
+    ./conbinicoin-gtest --gtest_filter="paymentdisclosure.*"
 
     Note: As an experimental feature, writing your own tests may require option flags to be set.
     mapArgs["-experimentalfeatures"] = true;

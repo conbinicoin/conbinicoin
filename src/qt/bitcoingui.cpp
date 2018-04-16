@@ -275,7 +275,7 @@ void BitcoinGUI::createActions()
     tabGroup->addAction(overviewAction);
 
     addressBookAction = new QAction(platformStyle->MultiColorIcon(":/images/addressbook1"), tr("&Addrress Book"), this);
-    addressBookAction->setStatusTip(tr("View and manage the LitecoinZ address book"));
+    addressBookAction->setStatusTip(tr("View and manage the ConbiniCoin address book"));
     addressBookAction->setToolTip(addressBookAction->statusTip());
     addressBookAction->setCheckable(true);
     addressBookAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
@@ -286,7 +286,7 @@ void BitcoinGUI::createActions()
     addressBookMenuAction->setToolTip(addressBookMenuAction->statusTip());
 
     sendCoinsAction = new QAction(platformStyle->MultiColorIcon(":/images/send"), tr("&Transparent Payment"), this);
-    sendCoinsAction->setStatusTip(tr("Send coins to a LitecoinZ address using transparent transactions"));
+    sendCoinsAction->setStatusTip(tr("Send coins to a ConbiniCoin address using transparent transactions"));
     sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
     sendCoinsAction->setCheckable(true);
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_3));
@@ -297,7 +297,7 @@ void BitcoinGUI::createActions()
     sendCoinsMenuAction->setToolTip(sendCoinsMenuAction->statusTip());
 
     sendZCoinsAction = new QAction(platformStyle->MultiColorIcon(":/images/send3"), tr("&Private Payment"), this);
-    sendZCoinsAction->setStatusTip(tr("Send coins to a LitecoinZ address using private transacions"));
+    sendZCoinsAction->setStatusTip(tr("Send coins to a ConbiniCoin address using private transacions"));
     sendZCoinsAction->setToolTip(sendZCoinsAction->statusTip());
     sendZCoinsAction->setCheckable(true);
     sendZCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_3));
@@ -308,7 +308,7 @@ void BitcoinGUI::createActions()
     sendZCoinsMenuAction->setToolTip(sendZCoinsMenuAction->statusTip());
 
     receiveCoinsAction = new QAction(platformStyle->MultiColorIcon(":/images/receive"), tr("&Receive"), this);
-    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and litecoinz: URIs)"));
+    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and conbinicoin: URIs)"));
     receiveCoinsAction->setToolTip(receiveCoinsAction->statusTip());
     receiveCoinsAction->setCheckable(true);
     receiveCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_4));
@@ -393,9 +393,9 @@ void BitcoinGUI::createActions()
     changePassphraseAction->setStatusTip(tr("Change the passphrase used for wallet encryption"));
     changePassphraseAction->setVisible(false); //TODO
     signMessageAction = new QAction(platformStyle->MultiColorIcon(":/images/encrypt"), tr("Sign &message..."), this);
-    signMessageAction->setStatusTip(tr("Sign messages with your LitecoinZ addresses to prove you own them"));
+    signMessageAction->setStatusTip(tr("Sign messages with your ConbiniCoin addresses to prove you own them"));
     verifyMessageAction = new QAction(platformStyle->MultiColorIcon(":/images/verify"), tr("&Verify message..."), this);
-    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified LitecoinZ addresses"));
+    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified ConbiniCoin addresses"));
 
     openRPCConsoleAction = new QAction(platformStyle->MultiColorIcon(":/images/debug"), tr("&Debug window"), this);
     openRPCConsoleAction->setStatusTip(tr("Open debugging and diagnostic console"));
@@ -403,11 +403,11 @@ void BitcoinGUI::createActions()
     openRPCConsoleAction->setEnabled(false);
 
     openAction = new QAction(platformStyle->MultiColorIcon(":/images/open"), tr("Open &URI..."), this);
-    openAction->setStatusTip(tr("Open a litecoinz: URI or payment request"));
+    openAction->setStatusTip(tr("Open a conbinicoin: URI or payment request"));
 
     showHelpMessageAction = new QAction(platformStyle->MultiColorIcon(":/images/info"), tr("&Command-line options"), this);
     showHelpMessageAction->setMenuRole(QAction::NoRole);
-    showHelpMessageAction->setStatusTip(tr("Show the %1 help message to get a list with possible LitecoinZ command-line options").arg(tr(PACKAGE_NAME)));
+    showHelpMessageAction->setStatusTip(tr("Show the %1 help message to get a list with possible ConbiniCoin command-line options").arg(tr(PACKAGE_NAME)));
 
     connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
     connect(aboutAction, SIGNAL(triggered()), this, SLOT(aboutClicked()));
@@ -794,7 +794,7 @@ void BitcoinGUI::setNumConnections(int count)
     default: icon = ":/images/connect_5"; break;
     }
     labelConnectionsIcon->setPixmap(platformStyle->MultiColorIcon(icon).pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to LitecoinZ network", "", count));
+    labelConnectionsIcon->setToolTip(tr("%n active connection(s) to ConbiniCoin network", "", count));
 }
 
 void BitcoinGUI::setNumBlocks(int count, const QDateTime& blockDate)
@@ -908,7 +908,7 @@ void BitcoinGUI::setNumBlocks(int count, const QDateTime& blockDate)
 
 void BitcoinGUI::message(const QString &title, const QString &message, unsigned int style, bool *ret)
 {
-    QString strTitle = tr("LitecoinZ"); // default title
+    QString strTitle = tr("ConbiniCoin"); // default title
     // Default to information icon
     int nMBoxIcon = QMessageBox::Information;
     int nNotifyIcon = Notificator::Information;
@@ -934,7 +934,7 @@ void BitcoinGUI::message(const QString &title, const QString &message, unsigned 
             break;
         }
     }
-    // Append title to "LitecoinZ - "
+    // Append title to "ConbiniCoin - "
     if (!msgType.isEmpty())
         strTitle += " - " + msgType;
 

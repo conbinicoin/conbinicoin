@@ -154,8 +154,8 @@
         <translation>正在為磁碟區塊重建索引...</translation>
     </message>
     <message>
-        <source>Send coins to a LitecoinZ address</source>
-        <translation>付款至一個 LitecoinZ 位址</translation>
+        <source>Send coins to a ConbiniCoin address</source>
+        <translation>付款至一個 ConbiniCoin 位址</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -178,8 +178,8 @@
         <translation>驗證訊息... &amp;V</translation>
     </message>
     <message>
-        <source>LitecoinZ</source>
-        <translation>LitecoinZ</translation>
+        <source>ConbiniCoin</source>
+        <translation>ConbiniCoin</translation>
     </message>
     <message>
         <source>Wallet</source>

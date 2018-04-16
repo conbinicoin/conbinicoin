@@ -55,21 +55,21 @@ $0 --help
   Show this help message and exit.
 
 $0 [ --enable-lcov || --disable-tests ] [ --disable-mining ] [ --enable-proton ] [ --disable-libs ] [ MAKEARGS... ]
-  Build LitecoinZ and most of its transitive dependencies from
-  source. MAKEARGS are applied to both dependencies and LitecoinZ itself.
+  Build ConbiniCoin and most of its transitive dependencies from
+  source. MAKEARGS are applied to both dependencies and ConbiniCoin itself.
 
-  If --enable-lcov is passed, LitecoinZ is configured to add coverage
+  If --enable-lcov is passed, ConbiniCoin is configured to add coverage
   instrumentation, thus enabling "make cov" to work.
-  If --disable-tests is passed instead, the LitecoinZ tests are not built.
+  If --disable-tests is passed instead, the ConbiniCoin tests are not built.
 
-  If --disable-mining is passed, LitecoinZ is configured to not build any mining
+  If --disable-mining is passed, ConbiniCoin is configured to not build any mining
   code. It must be passed after the test arguments, if present.
 
-  If --enable-proton is passed, LitecoinZ is configured to build the Apache Qpid Proton
+  If --enable-proton is passed, ConbiniCoin is configured to build the Apache Qpid Proton
   library required for AMQP support. This library is not built by default.
   It must be passed after the test/mining arguments, if present.
 
-  If --disable-libs is passed, LitecoinZ is configured to not build any libraries like
+  If --disable-libs is passed, ConbiniCoin is configured to not build any libraries like
   'libzcashconsensus'.
 EOF
     exit 0

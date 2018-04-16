@@ -166,8 +166,8 @@
         <translation>Re-indicizzazione blocchi su disco...</translation>
     </message>
     <message>
-        <source>Send coins to a LitecoinZ address</source>
-        <translation>Invia fondi ad un indirizzo LitecoinZ</translation>
+        <source>Send coins to a ConbiniCoin address</source>
+        <translation>Invia fondi ad un indirizzo ConbiniCoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -190,8 +190,8 @@
         <translation>&amp;Verifica messaggio...</translation>
     </message>
     <message>
-        <source>LitecoinZ</source>
-        <translation>LitecoinZ</translation>
+        <source>ConbiniCoin</source>
+        <translation>ConbiniCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -218,12 +218,12 @@
         <translation>Cifra le chiavi private che appartengono al tuo portamonete</translation>
     </message>
     <message>
-        <source>Sign messages with your LitecoinZ addresses to prove you own them</source>
-        <translation>Firma messaggi con i tuoi indirizzi LitecoinZ per dimostrarne il possesso</translation>
+        <source>Sign messages with your ConbiniCoin addresses to prove you own them</source>
+        <translation>Firma messaggi con i tuoi indirizzi ConbiniCoin per dimostrarne il possesso</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified LitecoinZ addresses</source>
-        <translation>Verifica che i messaggi siano stati firmati con gli indirizzi LitecoinZ specificati</translation>
+        <source>Verify messages to ensure they were signed with specified ConbiniCoin addresses</source>
+        <translation>Verifica che i messaggi siano stati firmati con gli indirizzi ConbiniCoin specificati</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -242,8 +242,8 @@
         <translation>Barra degli strumenti</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and litecoinz: URIs)</source>
-        <translation>Richiedi pagamenti (genera codici QR e litecoinz: URI)</translation>
+        <source>Request payments (generates QR codes and conbinicoin: URIs)</source>
+        <translation>Richiedi pagamenti (genera codici QR e conbinicoin: URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -254,16 +254,16 @@
         <translation>Mostra la lista degli indirizzi di ricezione utilizzati</translation>
     </message>
     <message>
-        <source>Open a litecoinz: URI or payment request</source>
-        <translation>Apri un litecoinz: URI o una richiesta di pagamento</translation>
+        <source>Open a conbinicoin: URI or payment request</source>
+        <translation>Apri un conbinicoin: URI o una richiesta di pagamento</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>Opzioni della riga di &amp;comando</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to LitecoinZ network</source>
-        <translation><numerusform>%n connessione attiva alla rete LitecoinZ</numerusform><numerusform>%n connessioni alla rete LitecoinZ attive</numerusform></translation>
+        <source>%n active connection(s) to ConbiniCoin network</source>
+        <translation><numerusform>%n connessione attiva alla rete ConbiniCoin</numerusform><numerusform>%n connessioni alla rete ConbiniCoin attive</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -330,8 +330,8 @@
         <translation>Aggiornato</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible LitecoinZ command-line options</source>
-        <translation>Mostra il messaggio di aiuto di %1 per ottenere una lista di opzioni di comando per LitecoinZ </translation>
+        <source>Show the %1 help message to get a list with possible ConbiniCoin command-line options</source>
+        <translation>Mostra il messaggio di aiuto di %1 per ottenere una lista di opzioni di comando per ConbiniCoin </translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -583,8 +583,8 @@
         <translation>Dato che questa è la prima volta che il programma viene lanciato, puoi scegliere dove %1 salverà i suoi dati.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the LitecoinZ block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
-        <translation>%1 scaricherà e salverà una copia della Blockchain di LitecoinZ. Saranno salvati almeno %2GB di dati in questo percorso e continueranno ad aumentare col tempo. Anche il portafoglio verrà salvato in questo percorso.</translation>
+        <source>%1 will download and store a copy of the ConbiniCoin block chain. At least %2GB of data will be stored in this directory, and it will grow over time. The wallet will also be stored in this directory.</source>
+        <translation>%1 scaricherà e salverà una copia della Blockchain di ConbiniCoin. Saranno salvati almeno %2GB di dati in questo percorso e continueranno ad aumentare col tempo. Anche il portafoglio verrà salvato in questo percorso.</translation>
     </message>
     <message>
         <source>Use the default data directory</source>
@@ -726,16 +726,16 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>&amp;Spendi resti non confermati</translation>
     </message>
     <message>
-        <source>Automatically open the LitecoinZ client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Apri automaticamente la porta del client LitecoinZ sul router. Il protocollo UPnP deve essere supportato da parte del router ed attivo.</translation>
+        <source>Automatically open the ConbiniCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Apri automaticamente la porta del client ConbiniCoin sul router. Il protocollo UPnP deve essere supportato da parte del router ed attivo.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Mappa le porte tramite &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the LitecoinZ network through a SOCKS5 proxy.</source>
-        <translation>Connessione alla rete LitecoinZ attraverso un proxy SOCKS5.</translation>
+        <source>Connect to the ConbiniCoin network through a SOCKS5 proxy.</source>
+        <translation>Connessione alla rete ConbiniCoin attraverso un proxy SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -774,8 +774,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the LitecoinZ network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Connette alla rete LitecoinZ attraverso un proxy SOCKS5 separato per Tor.</translation>
+        <source>Connect to the ConbiniCoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Connette alla rete ConbiniCoin attraverso un proxy SOCKS5 separato per Tor.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -819,7 +819,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Scegli l'unità di suddivisione predefinita da utilizzare per l'interfaccia e per l'invio di litecoinz.</translation>
+        <translation>Scegli l'unità di suddivisione predefinita da utilizzare per l'interfaccia e per l'invio di conbinicoin.</translation>
     </message>
     <message>
         <source>Whether to show coin selection features or not.</source>
@@ -869,8 +869,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Modulo</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the LitecoinZ network after a connection is established, but this process has not completed yet.</source>
-        <translation>Le informazioni visualizzate potrebbero non essere aggiornate. Il portamonete si sincronizza automaticamente con la rete LitecoinZ una volta stabilita una connessione, ma questo processo non è ancora stato completato.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the ConbiniCoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Le informazioni visualizzate potrebbero non essere aggiornate. Il portamonete si sincronizza automaticamente con la rete ConbiniCoin una volta stabilita una connessione, ma questo processo non è ancora stato completato.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -962,8 +962,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Importo</translation>
     </message>
     <message>
-        <source>Enter a LitecoinZ address (e.g. %1)</source>
-        <translation>Inserisci un indirizzo LitecoinZ (ad es. %1)</translation>
+        <source>Enter a ConbiniCoin address (e.g. %1)</source>
+        <translation>Inserisci un indirizzo ConbiniCoin (ad es. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1311,8 +1311,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>R&amp;iusa un indirizzo di ricezione (non raccomandato)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the LitecoinZ network.</source>
-        <translation>Un messaggio opzionale da allegare e mostrare all'apertura della richiesta di pagamento. Nota: Il messaggio non sarà inviato con il pagamento sulla rete LitecoinZ.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the ConbiniCoin network.</source>
+        <translation>Un messaggio opzionale da allegare e mostrare all'apertura della richiesta di pagamento. Nota: Il messaggio non sarà inviato con il pagamento sulla rete ConbiniCoin.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1385,7 +1385,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
     <name>SendCoinsPage</name>
     <message>
         <source>Send Coins</source>
-        <translation>Invia LitecoinZ</translation>
+        <translation>Invia ConbiniCoin</translation>
     </message>
     <message>
         <source>Coin Selection Features</source>
@@ -1468,7 +1468,7 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>somma almeno</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for litecoinz transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for conbinicoin transactions than the network can process.</source>
         <translation>Non vi è alcuna controindicazione a pagare la commissione minima, a patto che il volume delle transazioni sia inferiore allo spazio disponibile nei blocchi. Occorre comunque essere consapevoli che ciò potrebbe impedire la conferma delle transazioni nel caso in cui la rete risultasse satura.</translation>
     </message>
     <message>
@@ -1555,8 +1555,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Questo è un normale pagamento.</translation>
     </message>
     <message>
-        <source>The LitecoinZ address to send the payment to</source>
-        <translation>L'indirizzo LitecoinZ a cui vuoi inviare il pagamento</translation>
+        <source>The ConbiniCoin address to send the payment to</source>
+        <translation>L'indirizzo ConbiniCoin a cui vuoi inviare il pagamento</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -1575,8 +1575,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Rimuovi questa voce</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less litecoinzs than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>La commissione sarà sottratta dall'importo che si sta inviando. Il beneficiario riceverà un totale di litecoinz inferiore al valore digitato. Nel caso in cui siano stati selezionati più beneficiari la commissione sarà suddivisa in parti uguali.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less conbinicoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>La commissione sarà sottratta dall'importo che si sta inviando. Il beneficiario riceverà un totale di conbinicoin inferiore al valore digitato. Nel caso in cui siano stati selezionati più beneficiari la commissione sarà suddivisa in parti uguali.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -1599,8 +1599,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Inserisci un'etichetta per questo indirizzo per aggiungerlo alla lista degli indirizzi utilizzati</translation>
     </message>
     <message>
-        <source>A message that was attached to the litecoinz: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the LitecoinZ network.</source>
-        <translation>Messaggio incluso nel litecoinz URI e che sarà memorizzato con la transazione per vostro riferimento. Nota: Questo messaggio non sarà inviato attraverso la rete LitecoinZ.</translation>
+        <source>A message that was attached to the conbinicoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the ConbiniCoin network.</source>
+        <translation>Messaggio incluso nel conbinicoin URI e che sarà memorizzato con la transazione per vostro riferimento. Nota: Questo messaggio non sarà inviato attraverso la rete ConbiniCoin.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -1636,12 +1636,12 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>&amp;Firma Messaggio</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive litecoinzs sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>È possibile firmare messaggi/accordi con i propri indirizzi in modo da dimostrare di poter ricevere litecoinz attraverso di essi. Si consiglia di prestare attenzione a non firmare dichiarazioni vaghe o casuali, attacchi di phishing potrebbero cercare di indurre ad apporre la firma su di esse. Si raccomanda di firmare esclusivamente dichiarazioni completamente dettagliate e delle quali si condivide in pieno il contenuto.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive conbinicoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>È possibile firmare messaggi/accordi con i propri indirizzi in modo da dimostrare di poter ricevere conbinicoin attraverso di essi. Si consiglia di prestare attenzione a non firmare dichiarazioni vaghe o casuali, attacchi di phishing potrebbero cercare di indurre ad apporre la firma su di esse. Si raccomanda di firmare esclusivamente dichiarazioni completamente dettagliate e delle quali si condivide in pieno il contenuto.</translation>
     </message>
     <message>
-        <source>The LitecoinZ address to sign the message with</source>
-        <translation>L'indirizzo LitecoinZ da utilizzare per firmare il messaggio</translation>
+        <source>The ConbiniCoin address to sign the message with</source>
+        <translation>L'indirizzo ConbiniCoin da utilizzare per firmare il messaggio</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1672,8 +1672,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Copia la firma corrente nella clipboard</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this LitecoinZ address</source>
-        <translation>Firma un messaggio per dimostrare di possedere questo indirizzo LitecoinZ</translation>
+        <source>Sign the message to prove you own this ConbiniCoin address</source>
+        <translation>Firma un messaggio per dimostrare di possedere questo indirizzo ConbiniCoin</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1696,11 +1696,11 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Per verificare il messaggio inserire l'indirizzo del firmatario, il messaggio e la firma nei campi sottostanti, assicurandosi di copiare esattamente anche ritorni a capo, spazi, tabulazioni, etc.. Si raccomanda di non lasciarsi fuorviare dalla firma a leggere più di quanto non sia riportato nel testo del messaggio stesso, in modo da evitare di cadere vittima di attacchi di tipo man-in-the-middle. Si ricorda che la verifica della firma dimostra soltanto che il firmatario può ricevere pagamenti con l'indirizzo corrispondente, non prova l'invio di alcuna transazione.</translation>
     </message>
     <message>
-        <source>The LitecoinZ address the message was signed with</source>
-        <translation>L'indirizzo LitecoinZ con cui è stato contrassegnato il messaggio</translation>
+        <source>The ConbiniCoin address the message was signed with</source>
+        <translation>L'indirizzo ConbiniCoin con cui è stato contrassegnato il messaggio</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified LitecoinZ address</source>
+        <source>Verify the message to ensure it was signed with the specified ConbiniCoin address</source>
         <translation>Verifica il messaggio per accertare che sia stato firmato con l'indirizzo specificato</translation>
     </message>
     <message>
@@ -1825,8 +1825,8 @@ Per specificare più URL separarli con una barra verticale "|".</translation>
         <translation>Accetta connessioni dall'esterno (predefinito: 1 se -proxy o -connect non sono utilizzati)</translation>
     </message>
     <message>
-        <source>LitecoinZ Core</source>
-        <translation>LitecoinZ Core</translation>
+        <source>ConbiniCoin Core</source>
+        <translation>ConbiniCoin Core</translation>
     </message>
     <message>
         <source>-fallbackfee is set very high! This is the transaction fee you may pay when fee estimates are not available.</source>

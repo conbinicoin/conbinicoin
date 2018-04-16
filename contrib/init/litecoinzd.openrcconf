@@ -1,33 +1,33 @@
-# /etc/conf.d/litecoinzd: config file for /etc/init.d/litecoinzd
+# /etc/conf.d/conbinicoind: config file for /etc/init.d/conbinicoind
 
 # Config file location
-#LITECOINZD_CONFIGFILE="/etc/bitcoin/bitcoin.conf"
+#CONBINICOIND_CONFIGFILE="/etc/bitcoin/bitcoin.conf"
 
-# What directory to write pidfile to?  (created and owned by $LITECOINZD_USER)
-#LITECOINZD_PIDDIR="/var/run/litecoinzd"
+# What directory to write pidfile to?  (created and owned by $CONBINICOIND_USER)
+#CONBINICOIND_PIDDIR="/var/run/conbinicoind"
 
 # What filename to give the pidfile
-#LITECOINZD_PIDFILE="${LITECOINZD_PIDDIR}/litecoinzd.pid"
+#CONBINICOIND_PIDFILE="${CONBINICOIND_PIDDIR}/conbinicoind.pid"
 
-# Where to write litecoinzd data (be mindful that the blockchain is large)
-#LITECOINZD_DATADIR="/var/lib/litecoinzd"
+# Where to write conbinicoind data (be mindful that the blockchain is large)
+#CONBINICOIND_DATADIR="/var/lib/conbinicoind"
 
-# User and group to own litecoinzd process
-#LITECOINZD_USER="bitcoin"
-#LITECOINZD_GROUP="bitcoin"
+# User and group to own conbinicoind process
+#CONBINICOIND_USER="bitcoin"
+#CONBINICOIND_GROUP="bitcoin"
 
-# Path to litecoinzd executable
-#LITECOINZD_BIN="/usr/bin/litecoinzd"
+# Path to conbinicoind executable
+#CONBINICOIND_BIN="/usr/bin/conbinicoind"
 
-# Nice value to run litecoinzd under
-#LITECOINZD_NICE=0
+# Nice value to run conbinicoind under
+#CONBINICOIND_NICE=0
 
 # Additional options (avoid -conf and -datadir, use flags above)
-LITECOINZD_OPTS="-disablewallet"
+CONBINICOIND_OPTS="-disablewallet"
 
-# The timeout in seconds OpenRC will wait for litecoinzd to terminate
+# The timeout in seconds OpenRC will wait for conbinicoind to terminate
 # after a SIGTERM has been raised.
 # Note that this will be mapped as argument to start-stop-daemon's
 # '--retry' option, which means you can specify a retry schedule
 # here. For more information see man 8 start-stop-daemon.
-LITECOINZD_SIGTERM_TIMEOUT=60
+CONBINICOIND_SIGTERM_TIMEOUT=60

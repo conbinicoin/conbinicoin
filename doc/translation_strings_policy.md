@@ -1,4 +1,4 @@
-*** Warning: This document has not been updated for LitecoinZ and may be inaccurate. ***
+*** Warning: This document has not been updated for ConbiniCoin and may be inaccurate. ***
 
 Translation Strings Policy
 ===========================

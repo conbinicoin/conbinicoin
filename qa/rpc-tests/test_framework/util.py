@@ -1,5 +1,5 @@
 # Copyright (c) 2014 The Bitcoin Core developers
-# Copyright (c) 2017-2018 The LitecoinZ developers
+# Copyright (c) 2017-2018 The LitecoinZ and ConbiniCoin developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -70,13 +70,13 @@ def sync_mempools(rpc_connections, wait=1):
             break
         time.sleep(wait)
 
-litecoinzd_processes = {}
+conbinicoind_processes = {}
 
 def initialize_datadir(dirname, n):
     datadir = os.path.join(dirname, "node"+str(n))
     if not os.path.isdir(datadir):
         os.makedirs(datadir)
-    with open(os.path.join(datadir, "litecoinz.conf"), 'w') as f:
+    with open(os.path.join(datadir, "conbinicoin.conf"), 'w') as f:
         f.write("regtest=1\n");
         f.write("showmetrics=0\n");
         f.write("rpcuser=rt\n");
@@ -90,24 +90,24 @@ def initialize_chain(test_dir):
     """
     Create (or copy from cache) a 200-block-long chain and
     4 wallets.
-    litecoinzd and litecoinz-cli must be in search path.
+    conbinicoind and conbinicoin-cli must be in search path.
     """
 
     if not os.path.isdir(os.path.join("cache", "node0")):
         devnull = open("/dev/null", "w+")
-        # Create cache directories, run litecoinzds:
+        # Create cache directories, run conbinicoinds:
         for i in range(4):
             datadir=initialize_datadir("cache", i)
-            args = [ os.getenv("LITECOINZD", "litecoinzd"), "-keypool=1", "-datadir="+datadir, "-discover=0" ]
+            args = [ os.getenv("CONBINICOIND", "conbinicoind"), "-keypool=1", "-datadir="+datadir, "-discover=0" ]
             if i > 0:
                 args.append("-connect=127.0.0.1:"+str(p2p_port(0)))
-            litecoinzd_processes[i] = subprocess.Popen(args)
+            conbinicoind_processes[i] = subprocess.Popen(args)
             if os.getenv("PYTHON_DEBUG", ""):
-                print "initialize_chain: litecoinzd started, calling litecoinz-cli -rpcwait getblockcount"
-            subprocess.check_call([ os.getenv("LITECOINZCLI", "litecoinz-cli"), "-datadir="+datadir,
+                print "initialize_chain: conbinicoind started, calling conbinicoin-cli -rpcwait getblockcount"
+            subprocess.check_call([ os.getenv("CONBINICOINCLI", "conbinicoin-cli"), "-datadir="+datadir,
                                     "-rpcwait", "getblockcount"], stdout=devnull)
             if os.getenv("PYTHON_DEBUG", ""):
-                print "initialize_chain: litecoinz-cli -rpcwait getblockcount completed"
+                print "initialize_chain: conbinicoin-cli -rpcwait getblockcount completed"
         devnull.close()
         rpcs = []
         for i in range(4):
@@ -134,7 +134,7 @@ def initialize_chain(test_dir):
 
         # Shut them down, and clean up cache directories:
         stop_nodes(rpcs)
-        wait_litecoinzds()
+        wait_conbinicoinds()
         for i in range(4):
             os.remove(log_filename("cache", i, "debug.log"))
             os.remove(log_filename("cache", i, "db.log"))
@@ -145,7 +145,7 @@ def initialize_chain(test_dir):
         from_dir = os.path.join("cache", "node"+str(i))
         to_dir = os.path.join(test_dir,  "node"+str(i))
         shutil.copytree(from_dir, to_dir)
-        initialize_datadir(test_dir, i) # Overwrite port/rpcport in litecoinz.conf
+        initialize_datadir(test_dir, i) # Overwrite port/rpcport in conbinicoin.conf
 
 def initialize_chain_clean(test_dir, num_nodes):
     """
@@ -178,22 +178,22 @@ def _rpchost_to_args(rpchost):
 
 def start_node(i, dirname, extra_args=None, rpchost=None, timewait=None, binary=None):
     """
-    Start a litecoinzd and return RPC connection to it
+    Start a conbinicoind and return RPC connection to it
     """
     datadir = os.path.join(dirname, "node"+str(i))
     if binary is None:
-        binary = os.getenv("LITECOINZD", "litecoinzd")
+        binary = os.getenv("CONBINICOIND", "conbinicoind")
     args = [ binary, "-datadir="+datadir, "-keypool=1", "-discover=0", "-rest" ]
     if extra_args is not None: args.extend(extra_args)
-    litecoinzd_processes[i] = subprocess.Popen(args)
+    conbinicoind_processes[i] = subprocess.Popen(args)
     devnull = open("/dev/null", "w+")
     if os.getenv("PYTHON_DEBUG", ""):
-        print "start_node: litecoinzd started, calling litecoinz-cli -rpcwait getblockcount"
-    subprocess.check_call([ os.getenv("LITECOINZCLI", "litecoinz-cli"), "-datadir="+datadir] +
+        print "start_node: conbinicoind started, calling conbinicoin-cli -rpcwait getblockcount"
+    subprocess.check_call([ os.getenv("CONBINICOINCLI", "conbinicoin-cli"), "-datadir="+datadir] +
                           _rpchost_to_args(rpchost)  +
                           ["-rpcwait", "getblockcount"], stdout=devnull)
     if os.getenv("PYTHON_DEBUG", ""):
-        print "start_node: calling litecoinz-cli -rpcwait getblockcount returned"
+        print "start_node: calling conbinicoin-cli -rpcwait getblockcount returned"
     devnull.close()
     url = "http://rt:rt@%s:%d" % (rpchost or '127.0.0.1', rpc_port(i))
     if timewait is not None:
@@ -205,7 +205,7 @@ def start_node(i, dirname, extra_args=None, rpchost=None, timewait=None, binary=
 
 def start_nodes(num_nodes, dirname, extra_args=None, rpchost=None, binary=None):
     """
-    Start multiple litecoinzds, return RPC connections to them
+    Start multiple conbinicoinds, return RPC connections to them
     """
     if extra_args is None: extra_args = [ None for i in range(num_nodes) ]
     if binary is None: binary = [ None for i in range(num_nodes) ]
@@ -216,8 +216,8 @@ def log_filename(dirname, n_node, logname):
 
 def stop_node(node, i):
     node.stop()
-    litecoinzd_processes[i].wait()
-    del litecoinzd_processes[i]
+    conbinicoind_processes[i].wait()
+    del conbinicoind_processes[i]
 
 def stop_nodes(nodes):
     for node in nodes:
@@ -228,11 +228,11 @@ def set_node_times(nodes, t):
     for node in nodes:
         node.setmocktime(t)
 
-def wait_litecoinzds():
-    # Wait for all litecoinzds to cleanly exit
-    for litecoinzd in litecoinzd_processes.values():
-        litecoinzd.wait()
-    litecoinzd_processes.clear()
+def wait_conbinicoinds():
+    # Wait for all conbinicoinds to cleanly exit
+    for conbinicoind in conbinicoind_processes.values():
+        conbinicoind.wait()
+    conbinicoind_processes.clear()
 
 def connect_nodes(from_connection, node_num):
     ip_port = "127.0.0.1:"+str(p2p_port(node_num))

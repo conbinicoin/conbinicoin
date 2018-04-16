@@ -1,6 +1,6 @@
 <RCC>
     <qresource prefix="/icons">
-        <file alias="bitcoin">res/icons/litecoinz.png</file>
+        <file alias="bitcoin">res/icons/conbinicoin.png</file>
         <file alias="address-book">res/icons/address-book.png</file>
         <file alias="quit">res/icons/quit.png</file>
         <file alias="send">res/icons/send.png</file>
@@ -109,7 +109,7 @@
         <file alias="synced">res/images/synced.png</file>
         <file alias="fontbigger">res/images/fontbigger.png</file>
         <file alias="fontsmaller">res/images/fontsmaller.png</file>
-        <file alias="litecoinz">res/images/litecoinz.png</file>
+        <file alias="conbinicoin">res/images/conbinicoin.png</file>
         <file alias="tx_input">res/images/tx_in.png</file>
         <file alias="tx_inout">res/images/tx_inout.png</file>
         <file alias="tx_output">res/images/tx_out.png</file>

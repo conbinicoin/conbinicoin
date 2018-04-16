@@ -2,11 +2,11 @@
 
 set -eu
 
-PARAMS_DIR="$HOME/.litecoinz-params"
+PARAMS_DIR="$HOME/.conbinicoin-params"
 
 SPROUT_PKEY_NAME='sprout-proving.key'
 SPROUT_VKEY_NAME='sprout-verifying.key'
-SPROUT_URL="https://litecoinz.info/downloads"
+SPROUT_URL="https://conbinicoin.com/downloads"
 SPROUT_IPFS="/ipfs/QmZKKx7Xup7LiAtFRhYsE1M7waXcv9ir9eCECyXAFGxhEo"
 
 SHA256CMD="$(command -v sha256sum || echo shasum)"
@@ -59,7 +59,7 @@ EOF
 function fetch_failure {
     cat >&2 <<EOF
 
-Failed to fetch the LitecoinZ zkSNARK parameters!
+Failed to fetch the ConbiniCoin zkSNARK parameters!
 Try installing one of the following programs and make sure you're online:
 
  * ipfs
@@ -121,9 +121,9 @@ function main() {
     || exit_locked_error
 
     cat <<EOF
-LitecoinZ - fetch-params.sh
+ConbiniCoin - fetch-params.sh
 
-This script will fetch the LitecoinZ zkSNARK parameters and verify their
+This script will fetch the ConbiniCoin zkSNARK parameters and verify their
 integrity with sha256sum.
 
 If they already exist locally, it will exit now and do nothing else.
@@ -135,7 +135,7 @@ EOF
         mkdir -p "$PARAMS_DIR"
         README_PATH="$PARAMS_DIR/README"
         cat >> "$README_PATH" <<EOF
-This directory stores common LitecoinZ zkSNARK parameters. Note that it is
+This directory stores common ConbiniCoin zkSNARK parameters. Note that it is
 distinct from the daemon's -datadir argument because the parameters are
 large and may be shared across multiple distinct -datadir's such as when
 setting up test networks.

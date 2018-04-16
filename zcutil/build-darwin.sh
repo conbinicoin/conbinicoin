@@ -55,13 +55,13 @@ $0 --help
   Show this help message and exit.
 
 $0 [ --disable-mining ] [ --enable-proton ] [ MAKEARGS... ]
-  Build LitecoinZ and most of its transitive dependencies from
-  source. MAKEARGS are applied to both dependencies and LitecoinZ itself.
+  Build ConbiniCoin and most of its transitive dependencies from
+  source. MAKEARGS are applied to both dependencies and ConbiniCoin itself.
 
-  If --disable-mining is passed, LitecoinZ is configured to not build any mining
+  If --disable-mining is passed, ConbiniCoin is configured to not build any mining
   code. It must be passed after the test arguments, if present.
 
-  If --enable-proton is passed, LitecoinZ is configured to build the Apache Qpid Proton
+  If --enable-proton is passed, ConbiniCoin is configured to build the Apache Qpid Proton
   library required for AMQP support. This library is not built by default.
   It must be passed after the test/mining arguments, if present.
 EOF

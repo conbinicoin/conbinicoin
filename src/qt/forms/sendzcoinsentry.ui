@@ -84,7 +84,7 @@
       <item>
        <widget class="QValidatedLineEdit" name="payTo">
         <property name="toolTip">
-         <string>The LitecoinZ address to send the payment to</string>
+         <string>The ConbiniCoin address to send the payment to</string>
         </property>
        </widget>
       </item>
@@ -210,7 +210,7 @@
       <item>
        <widget class="QCheckBox" name="checkboxSendToZAddress">
         <property name="toolTip">
-         <string>The fee will be deducted from the amount being sent. The recipient will receive less litecoinzs than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</string>
+         <string>The fee will be deducted from the amount being sent. The recipient will receive less conbinicoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</string>
         </property>
         <property name="text">
          <string>S&amp;end to z-address</string>

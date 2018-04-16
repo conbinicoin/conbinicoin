@@ -1,5 +1,5 @@
 // Copyright (c) 2011-2015 The Bitcoin Core developers
-// Copyright (c) 2017-2018 The LitecoinZ developers
+// Copyright (c) 2017-2018 The LitecoinZ and ConbiniCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -18,7 +18,7 @@ namespace Ui {
 }
 
 /**
- * A single entry in the dialog for sending litecoinzs.
+ * A single entry in the dialog for sending conbinicoins.
  * Stacked widget, with different UIs for payment requests
  * with a strong payee identity.
  */

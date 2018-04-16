@@ -7,17 +7,17 @@ define(_CLIENT_VERSION_BUILD, 50)
 define(_CLIENT_VERSION_IS_RELEASE, true)
 define(_COPYRIGHT_YEAR, 2018)
 define(_COPYRIGHT_HOLDERS,[The %s developers])
-define(_COPYRIGHT_HOLDERS_SUBSTITUTION,[LitecoinZ])
-AC_INIT([LitecoinZ],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[https://github.com/litecoinz-project/litecoinz/issues],[litecoinz],[https://litecoinz.info/])
+define(_COPYRIGHT_HOLDERS_SUBSTITUTION,[ConbiniCoin])
+AC_INIT([ConbiniCoin],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[https://github.com/conbinicoin-project/conbinicoin/issues],[conbinicoin],[https://conbinicoin.com/])
 AC_CONFIG_SRCDIR([src/main.cpp])
 AC_CONFIG_HEADERS([src/config/bitcoin-config.h])
 AC_CONFIG_AUX_DIR([build-aux])
 AC_CONFIG_MACRO_DIR([build-aux/m4])
 
-BITCOIN_DAEMON_NAME=litecoinzd
-BITCOIN_GUI_NAME=litecoinz-qt
-BITCOIN_CLI_NAME=litecoinz-cli
-BITCOIN_TX_NAME=litecoinz-tx
+BITCOIN_DAEMON_NAME=conbinicoind
+BITCOIN_GUI_NAME=conbinicoin-qt
+BITCOIN_CLI_NAME=conbinicoin-cli
+BITCOIN_TX_NAME=conbinicoin-tx
 
 dnl Unless the user specified ARFLAGS, force it to be cr
 AC_ARG_VAR(ARFLAGS, [Flags for the archiver, defaults to <cr> if not set])
@@ -231,7 +231,7 @@ CPPFLAGS="$CPPFLAGS -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS"
 
 AC_ARG_WITH([utils],
   [AS_HELP_STRING([--with-utils],
-  [build litecoinz-cli litecoinz-tx (default=yes)])],
+  [build conbinicoin-cli conbinicoin-tx (default=yes)])],
   [build_bitcoin_utils=$withval],
   [build_bitcoin_utils=yes])
 
@@ -835,18 +835,18 @@ else
   LIBSNARK_DEPINST="$prefix"
 fi
 
-# Additional LitecoinZ flags
+# Additional ConbiniCoin flags
 AX_CHECK_COMPILE_FLAG([-fwrapv],[CXXFLAGS="$CXXFLAGS -fwrapv"])
 AX_CHECK_COMPILE_FLAG([-fno-strict-aliasing],[CXXFLAGS="$CXXFLAGS -fno-strict-aliasing"])
 AX_CHECK_COMPILE_FLAG([-Wno-builtin-declaration-mismatch],[CXXFLAGS="$CXXFLAGS -Wno-builtin-declaration-mismatch"],,[[$CXXFLAG_WERROR]])
 
 LIBZCASH_LIBS="$GMP_LIBS $GMPXX_LIBS $BOOST_SYSTEM_LIB $CRYPTO_LIBS -lsodium"
 
-AC_MSG_CHECKING([whether to build litecoinzd])
+AC_MSG_CHECKING([whether to build conbinicoind])
 AM_CONDITIONAL([BUILD_BITCOIND], [test x$build_bitcoind = xyes])
 AC_MSG_RESULT($build_bitcoind)
 
-AC_MSG_CHECKING([whether to build utils (litecoinz-cli litecoinz-tx)])
+AC_MSG_CHECKING([whether to build utils (conbinicoin-cli conbinicoin-tx)])
 AM_CONDITIONAL([BUILD_BITCOIN_UTILS], [test x$build_bitcoin_utils = xyes])
 AC_MSG_RESULT($build_bitcoin_utils)
 
@@ -921,7 +921,7 @@ if test x$bitcoin_enable_qt != xno; then
     AC_MSG_WARN("xgettext is required to update qt translations")
   fi
 
-  AC_MSG_CHECKING([whether to build test_litecoinz-qt])
+  AC_MSG_CHECKING([whether to build test_conbinicoin-qt])
   if test x$use_gui_tests$bitcoin_enable_qt_test = xyesyes; then
     AC_MSG_RESULT([yes])
     BUILD_TEST_QT="yes"
@@ -1028,7 +1028,7 @@ AC_SUBST(PROTON_LIBS)
 AC_SUBST(PROTOBUF_LIBS)
 AC_SUBST(QR_LIBS)
 AC_CONFIG_FILES([Makefile src/Makefile doc/man/Makefile share/setup.nsi share/qt/Info.plist src/test/buildenv.py])
-AC_CONFIG_FILES([qa/pull-tester/run-litecoinzd-for-test.sh],[chmod +x qa/pull-tester/run-litecoinzd-for-test.sh])
+AC_CONFIG_FILES([qa/pull-tester/run-conbinicoind-for-test.sh],[chmod +x qa/pull-tester/run-conbinicoind-for-test.sh])
 AC_CONFIG_FILES([qa/pull-tester/tests-config.sh],[chmod +x qa/pull-tester/tests-config.sh])
 
 dnl boost's m4 checks do something really nasty: they export these vars. As a

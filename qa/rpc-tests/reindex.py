@@ -1,6 +1,6 @@
 #!/usr/bin/env python2
 # Copyright (c) 2014 The Bitcoin Core developers
-# Copyright (c) 2017-2018 The LitecoinZ developers
+# Copyright (c) 2017-2018 The LitecoinZ and ConbiniCoin developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -10,7 +10,7 @@
 
 from test_framework.test_framework import BitcoinTestFramework
 from test_framework.util import assert_equal, initialize_chain_clean, \
-    start_node, stop_node, wait_litecoinzds
+    start_node, stop_node, wait_conbinicoinds
 
 
 class ReindexTest(BitcoinTestFramework):
@@ -27,7 +27,7 @@ class ReindexTest(BitcoinTestFramework):
     def run_test(self):
         self.nodes[0].generate(3)
         stop_node(self.nodes[0], 0)
-        wait_litecoinzds()
+        wait_conbinicoinds()
         self.nodes[0]=start_node(0, self.options.tmpdir, ["-debug", "-reindex", "-checkblockindex=1"])
         assert_equal(self.nodes[0].getblockcount(), 3)
         print "Success"

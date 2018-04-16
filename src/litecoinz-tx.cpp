@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2014 The Bitcoin Core developers
-// Copyright (c) 2017-2018 The LitecoinZ developers
+// Copyright (c) 2017-2018 The LitecoinZ and ConbiniCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -47,10 +47,10 @@ static bool AppInitRawTx(int argc, char* argv[])
     if (argc<2 || mapArgs.count("-?") || mapArgs.count("-h") || mapArgs.count("-help"))
     {
         // First part of help message is specific to this utility
-        std::string strUsage = _("LitecoinZ litecoinz-tx utility version") + " " + FormatFullVersion() + "\n\n" +
+        std::string strUsage = _("ConbiniCoin conbinicoin-tx utility version") + " " + FormatFullVersion() + "\n\n" +
             _("Usage:") + "\n" +
-              "  litecoinz-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded litecoinz transaction") + "\n" +
-              "  litecoinz-tx [options] -create [commands]   " + _("Create hex-encoded litecoinz transaction") + "\n" +
+              "  conbinicoin-tx [options] <hex-tx> [commands]  " + _("Update hex-encoded conbinicoin transaction") + "\n" +
+              "  conbinicoin-tx [options] -create [commands]   " + _("Create hex-encoded conbinicoin transaction") + "\n" +
               "\n";
 
         fprintf(stdout, "%s", strUsage.c_str());

@@ -1,6 +1,6 @@
 #!/usr/bin/env python2
 # Copyright (c) 2014 The Bitcoin Core developers
-# Copyright (c) 2017-2018 The LitecoinZ developers
+# Copyright (c) 2017-2018 The LitecoinZ and ConbiniCoin developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -8,7 +8,7 @@ from test_framework.test_framework import BitcoinTestFramework
 from test_framework.authproxy import JSONRPCException
 from test_framework.util import assert_equal, assert_greater_than, \
     initialize_chain_clean, start_nodes, connect_nodes_bi, stop_nodes, \
-    wait_litecoinzds
+    wait_conbinicoinds
 
 from decimal import Decimal
 
@@ -431,7 +431,7 @@ class RawTransactionsTest(BitcoinTestFramework):
         self.nodes[1].encryptwallet("test")
         self.nodes.pop(1)
         stop_nodes(self.nodes)
-        wait_litecoinzds()
+        wait_conbinicoinds()
 
         self.nodes = start_nodes(3, self.options.tmpdir)
 

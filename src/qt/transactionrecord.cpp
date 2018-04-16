@@ -107,7 +107,7 @@ QList<TransactionRecord> TransactionRecord::decomposeZTransaction(const CWallet 
                 CTxDestination tAddress;
                 if (ExtractDestination(txout.scriptPubKey, tAddress))
                 {
-                    // Received by LitecoinZ Address
+                    // Received by ConbiniCoin Address
                     address = CBitcoinAddress(tAddress).ToString();
                 }
 
@@ -177,7 +177,7 @@ QList<TransactionRecord> TransactionRecord::decomposeZTransaction(const CWallet 
                 CTxDestination tAddress;
                 if (ExtractDestination(txout.scriptPubKey, tAddress))
                 {
-                    // Received by LitecoinZ Address
+                    // Received by ConbiniCoin Address
                     address = CBitcoinAddress(tAddress).ToString();
                 }
             }
@@ -225,7 +225,7 @@ QList<TransactionRecord> TransactionRecord::decomposeTTransaction(const CWallet 
                 sub.involvesWatchAddress = mine & ISMINE_WATCH_ONLY;
                 if (ExtractDestination(txout.scriptPubKey, address) && IsMine(*wallet, address))
                 {
-                    // Received by LitecoinZ Address
+                    // Received by ConbiniCoin Address
                     sub.type = TransactionRecord::RecvWithAddress;
                     sub.address = CBitcoinAddress(address).ToString();
                 }
@@ -297,7 +297,7 @@ QList<TransactionRecord> TransactionRecord::decomposeTTransaction(const CWallet 
                 CTxDestination address;
                 if (ExtractDestination(txout.scriptPubKey, address))
                 {
-                    // Sent to LitecoinZ Address
+                    // Sent to ConbiniCoin Address
                     sub.type = TransactionRecord::SendToAddress;
                     sub.address = CBitcoinAddress(address).ToString();
                 }

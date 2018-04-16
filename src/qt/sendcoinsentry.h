@@ -17,7 +17,7 @@ namespace Ui {
 }
 
 /**
- * A single entry in the dialog for sending litecoinzs.
+ * A single entry in the dialog for sending conbinicoins.
  * Stacked widget, with different UIs for payment requests
  * with a strong payee identity.
  */

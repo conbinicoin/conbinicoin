@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "LitecoinZ"
-            VALUE "FileDescription",    "litecoinz-addrgen (CLI LitecoinZ transaction editor utility)"
+            VALUE "CompanyName",        "ConbiniCoin"
+            VALUE "FileDescription",    "conbinicoin-addrgen (CLI ConbiniCoin transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "litecoinz-addrgen"
+            VALUE "InternalName",       "conbinicoin-addrgen"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "litecoinz-addrgen.exe"
-            VALUE "ProductName",        "litecoinz-addrgen"
+            VALUE "OriginalFilename",   "conbinicoin-addrgen.exe"
+            VALUE "ProductName",        "conbinicoin-addrgen"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

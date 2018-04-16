@@ -114,8 +114,8 @@
         <translation>Newid y cyfrinymadrodd a ddefnyddiwyd ar gyfer amgryptio'r waled</translation>
     </message>
     <message>
-        <source>LitecoinZ</source>
-        <translation>LitecoinZ</translation>
+        <source>ConbiniCoin</source>
+        <translation>ConbiniCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -490,8 +490,8 @@
         <translation>Opsiynau:</translation>
     </message>
     <message>
-        <source>LitecoinZ Core</source>
-        <translation>Craidd LitecoinZ</translation>
+        <source>ConbiniCoin Core</source>
+        <translation>Craidd ConbiniCoin</translation>
     </message>
     <message>
         <source>Information</source>

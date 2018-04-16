@@ -146,7 +146,7 @@
         <translation>Пераіндэксацыя блокаў на дыску...</translation>
     </message>
     <message>
-        <source>Send coins to a LitecoinZ address</source>
+        <source>Send coins to a ConbiniCoin address</source>
         <translation>Даслаць манеты на Біткойн-адрас</translation>
     </message>
     <message>
@@ -170,7 +170,7 @@
         <translation>Праверыць паведамленне...</translation>
     </message>
     <message>
-        <source>LitecoinZ</source>
+        <source>ConbiniCoin</source>
         <translation>Біткойн</translation>
     </message>
     <message>
@@ -198,11 +198,11 @@
         <translation>Зашыфраваць прыватныя ключы, якия належаць вашаму гаманцу</translation>
     </message>
     <message>
-        <source>Sign messages with your LitecoinZ addresses to prove you own them</source>
+        <source>Sign messages with your ConbiniCoin addresses to prove you own them</source>
         <translation>Падпісаць паведамленне з дапамогай Біткойн-адраса каб даказаць, што яно належыць вам</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified LitecoinZ addresses</source>
+        <source>Verify messages to ensure they were signed with specified ConbiniCoin addresses</source>
         <translation>Спраўдзіць паведамленне з дапамогай Біткойн-адраса каб даказаць, што яно належыць вам</translation>
     </message>
     <message>
@@ -218,7 +218,7 @@
         <translation>Дапамога</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and litecoinz: URIs)</source>
+        <source>Request payments (generates QR codes and conbinicoin: URIs)</source>
         <translation>Запатрабаваць плацёж (генеруецца QR-код для біткойн URI)</translation>
     </message>
     <message>
@@ -230,7 +230,7 @@
         <translation>Паказаць спіс адрасоў і метак для прымання</translation>
     </message>
     <message>
-        <source>Open a litecoinz: URI or payment request</source>
+        <source>Open a conbinicoin: URI or payment request</source>
         <translation>Адкрыць біткойн: URI ці запыт плацяжу</translation>
     </message>
     <message>
@@ -238,8 +238,8 @@
         <translation>Опцыі каманднага радка</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to LitecoinZ network</source>
-        <translation><numerusform>%n актыўнае злучэнне з сецівам LitecoinZ</numerusform><numerusform>%n актыўных злучэнняў з сецівам LitecoinZ</numerusform><numerusform>%n актыўных злучэнняў з сецівам LitecoinZ</numerusform><numerusform>%n актыўных злучэнняў з сецівам LitecoinZ</numerusform></translation>
+        <source>%n active connection(s) to ConbiniCoin network</source>
+        <translation><numerusform>%n актыўнае злучэнне з сецівам ConbiniCoin</numerusform><numerusform>%n актыўных злучэнняў з сецівам ConbiniCoin</numerusform><numerusform>%n актыўных злучэнняў з сецівам ConbiniCoin</numerusform><numerusform>%n актыўных злучэнняў з сецівам ConbiniCoin</numerusform></translation>
     </message>
     <message>
         <source>No block source available...</source>
@@ -736,8 +736,8 @@
         <translation>Запусціць у фоне як дэман і прымаць каманды</translation>
     </message>
     <message>
-        <source>LitecoinZ Core</source>
-        <translation>LitecoinZ Core</translation>
+        <source>ConbiniCoin Core</source>
+        <translation>ConbiniCoin Core</translation>
     </message>
     <message>
         <source>Do you want to rebuild the block database now?</source>

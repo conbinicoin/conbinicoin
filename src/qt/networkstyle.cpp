@@ -27,7 +27,7 @@ NetworkStyle::NetworkStyle(const QString &appName, const int iconColorHueShift, 
     titleAddText(qApp->translate("SplashScreen", titleAddText))
 {
     // load pixmap
-    QPixmap pixmap(":/images/litecoinz");
+    QPixmap pixmap(":/images/conbinicoin");
 
     if(iconColorHueShift != 0 && iconColorSaturationReduction != 0)
     {

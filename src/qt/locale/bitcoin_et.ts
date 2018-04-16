@@ -62,12 +62,12 @@
         <translation>Vastuvõtvad aadressid</translation>
     </message>
     <message>
-        <source>These are your LitecoinZ addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Need on sinu LitecoinZ aadressid maksete saatmiseks. Ennem müntide saatmist kontrolli alati summat ja makse saaja aadressi.</translation>
+        <source>These are your ConbiniCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Need on sinu ConbiniCoin aadressid maksete saatmiseks. Ennem müntide saatmist kontrolli alati summat ja makse saaja aadressi.</translation>
     </message>
     <message>
-        <source>These are your LitecoinZ addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Need on sinu LitecoinZ aadressid sisenevate maksete vastu võtmiseks. Soovitav on iga tehingu tarbeks kasutada uut aadressi.</translation>
+        <source>These are your ConbiniCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Need on sinu ConbiniCoin aadressid sisenevate maksete vastu võtmiseks. Soovitav on iga tehingu tarbeks kasutada uut aadressi.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,8 +168,8 @@
         <translation>Kinnita rahakoti krüpteerimine.</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR LITECOINZS&lt;/b&gt;!</source>
-        <translation>Hoiatus:Kui sa krüpteerid oma rahakoti ja kaotad salafraasi, siis sa&lt;b&gt;KAOTAD OMA LITECOINZID&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR CONBINICOINS&lt;/b&gt;!</source>
+        <translation>Hoiatus:Kui sa krüpteerid oma rahakoti ja kaotad salafraasi, siis sa&lt;b&gt;KAOTAD OMA CONBINICOINID&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -286,7 +286,7 @@
         <translation>Kettal olevate blokkide re-indekseerimine...</translation>
     </message>
     <message>
-        <source>Send coins to a LitecoinZ address</source>
+        <source>Send coins to a ConbiniCoin address</source>
         <translation>Saada münte Litecoinzi aadressile</translation>
     </message>
     <message>
@@ -310,8 +310,8 @@
         <translation>&amp;Kontrolli sõnumit...</translation>
     </message>
     <message>
-        <source>LitecoinZ</source>
-        <translation>LitecoinZ</translation>
+        <source>ConbiniCoin</source>
+        <translation>ConbiniCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -338,11 +338,11 @@
         <translation>Krüpteeri oma rahakoti privaatvõtmed</translation>
     </message>
     <message>
-        <source>Sign messages with your LitecoinZ addresses to prove you own them</source>
+        <source>Sign messages with your ConbiniCoin addresses to prove you own them</source>
         <translation>Omandi tõestamiseks allkirjasta sõnumid oma Litecoinzi aadressiga</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified LitecoinZ addresses</source>
+        <source>Verify messages to ensure they were signed with specified ConbiniCoin addresses</source>
         <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud Litecoinzi aadressiga</translation>
     </message>
     <message>
@@ -362,19 +362,19 @@
         <translation>Vahelehe tööriistariba</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and litecoinz: URIs)</source>
-        <translation>Loo maksepäring (genereerib QR koodid ja litecoinzi: URId)</translation>
+        <source>Request payments (generates QR codes and conbinicoin: URIs)</source>
+        <translation>Loo maksepäring (genereerib QR koodid ja conbinicoini: URId)</translation>
     </message>
     <message>
-        <source>Open a litecoinz: URI or payment request</source>
-        <translation>Ava litecoinzi: URI või maksepäring</translation>
+        <source>Open a conbinicoin: URI or payment request</source>
+        <translation>Ava conbinicoini: URI või maksepäring</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>Käsurea valikud</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to LitecoinZ network</source>
+        <source>%n active connection(s) to ConbiniCoin network</source>
         <translation><numerusform>%n aktiivne ühendus Litecoinzi võrku</numerusform><numerusform>%n aktiivset ühendust Litecoinzi võrku</numerusform></translation>
     </message>
     <message>
@@ -710,8 +710,8 @@
         <translation>Muuda saatvat aadressi</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid LitecoinZ address.</source>
-        <translation>Sisestatud aadress "%1" ei ole korrektne LitecoinZ aadress.</translation>
+        <source>The entered address "%1" is not a valid ConbiniCoin address.</source>
+        <translation>Sisestatud aadress "%1" ei ole korrektne ConbiniCoin aadress.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -825,7 +825,7 @@
         <translation>Ekspert</translation>
     </message>
     <message>
-        <source>Automatically open the LitecoinZ client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the ConbiniCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>Litecoinzi kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
     </message>
     <message>
@@ -908,8 +908,8 @@
         <translation>Vorm</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the LitecoinZ network after a connection is established, but this process has not completed yet.</source>
-        <translation>Kuvatav info ei pruugi olla ajakohane. Ühenduse loomisel süngitakse sinu rahakott automaatselt LitecoinZ võrgustikuga, kuid see toiming on hetkel lõpetamata.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the ConbiniCoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Kuvatav info ei pruugi olla ajakohane. Ühenduse loomisel süngitakse sinu rahakott automaatselt ConbiniCoin võrgustikuga, kuid see toiming on hetkel lõpetamata.</translation>
     </message>
     <message>
         <source>Pending:</source>
@@ -1375,8 +1375,8 @@
         <translation>Maksepäring aegunud.</translation>
     </message>
     <message>
-        <source>Warning: Invalid LitecoinZ address</source>
-        <translation>Hoiatus: Ebakorrektne LitecoinZ aadress</translation>
+        <source>Warning: Invalid ConbiniCoin address</source>
+        <translation>Hoiatus: Ebakorrektne ConbiniCoin aadress</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -1455,8 +1455,8 @@
         <translation>&amp;Allkirjastamise teade</translation>
     </message>
     <message>
-        <source>The LitecoinZ address to sign the message with</source>
-        <translation>LitecoinZ aadress millega sõnum allkirjastada</translation>
+        <source>The ConbiniCoin address to sign the message with</source>
+        <translation>ConbiniCoin aadress millega sõnum allkirjastada</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1487,7 +1487,7 @@
         <translation>Kopeeri praegune signatuur vahemällu</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this LitecoinZ address</source>
+        <source>Sign the message to prove you own this ConbiniCoin address</source>
         <translation>Allkirjasta sõnum Litecoinzi aadressi sulle kuulumise tõestamiseks</translation>
     </message>
     <message>
@@ -1507,11 +1507,11 @@
         <translation>&amp;Kinnita Sõnum</translation>
     </message>
     <message>
-        <source>The LitecoinZ address the message was signed with</source>
-        <translation>LitecoinZ aadress millega sõnum on allkirjastatud</translation>
+        <source>The ConbiniCoin address the message was signed with</source>
+        <translation>ConbiniCoin aadress millega sõnum on allkirjastatud</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified LitecoinZ address</source>
+        <source>Verify the message to ensure it was signed with the specified ConbiniCoin address</source>
         <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud Litecoinzi aadressiga.</translation>
     </message>
     <message>
@@ -1800,7 +1800,7 @@
         <translation>Luba välisühendusi (vaikeväärtus: 1 kui puudub -proxy või -connect)</translation>
     </message>
     <message>
-        <source>LitecoinZ Core</source>
+        <source>ConbiniCoin Core</source>
         <translation>Litecoinzi tuumik</translation>
     </message>
     <message>

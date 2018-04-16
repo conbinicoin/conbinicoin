@@ -1,5 +1,5 @@
 #!/bin/sh
-# postinst script for litecoinz
+# postinst script for conbinicoin
 #
 # see: dh_installdeb(1)
 

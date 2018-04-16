@@ -94,8 +94,8 @@
         <translation>Ndrysho frazkalimin e përdorur per enkriptimin e portofolit</translation>
     </message>
     <message>
-        <source>LitecoinZ</source>
-        <translation>LitecoinZ</translation>
+        <source>ConbiniCoin</source>
+        <translation>ConbiniCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -438,8 +438,8 @@
         <translation>Opsionet:</translation>
     </message>
     <message>
-        <source>LitecoinZ Core</source>
-        <translation>Berthama LitecoinZ</translation>
+        <source>ConbiniCoin Core</source>
+        <translation>Berthama ConbiniCoin</translation>
     </message>
     <message>
         <source>Information</source>

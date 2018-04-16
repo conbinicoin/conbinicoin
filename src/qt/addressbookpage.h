@@ -1,4 +1,4 @@
-// Copyright (c) 2017-2018 The LitecoinZ developers
+// Copyright (c) 2017-2018 The LitecoinZ and ConbiniCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -23,7 +23,7 @@ class QSortFilterProxyModel;
 class QTableView;
 QT_END_NAMESPACE
 
-/** Dialog for LitecoinZ Address Book */
+/** Dialog for ConbiniCoin Address Book */
 class AddressBookPage : public QDialog
 {
     Q_OBJECT

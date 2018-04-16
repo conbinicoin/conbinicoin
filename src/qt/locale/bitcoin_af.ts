@@ -158,8 +158,8 @@
         <translation>Besig met herindeksering van blokke op hardeskyf...</translation>
     </message>
     <message>
-        <source>Send coins to a LitecoinZ address</source>
-        <translation>Stuur munte na 'n LitecoinZ adres</translation>
+        <source>Send coins to a ConbiniCoin address</source>
+        <translation>Stuur munte na 'n ConbiniCoin adres</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -170,8 +170,8 @@
         <translation>Verander die wagwoord wat ek vir kodifikasie van my beursie gebruik</translation>
     </message>
     <message>
-        <source>LitecoinZ</source>
-        <translation>LitecoinZ</translation>
+        <source>ConbiniCoin</source>
+        <translation>ConbiniCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -194,12 +194,12 @@
         <translation>Kodifiseer die private sleutes wat aan jou beursie gekoppel is.</translation>
     </message>
     <message>
-        <source>Sign messages with your LitecoinZ addresses to prove you own them</source>
-        <translation>Onderteken boodskappe met u LitecoinZ adresse om u eienaarskap te bewys</translation>
+        <source>Sign messages with your ConbiniCoin addresses to prove you own them</source>
+        <translation>Onderteken boodskappe met u ConbiniCoin adresse om u eienaarskap te bewys</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified LitecoinZ addresses</source>
-        <translation>Verifieër boodskappe om seker te maak dat dit met die gespesifiseerde LitecoinZ adresse</translation>
+        <source>Verify messages to ensure they were signed with specified ConbiniCoin addresses</source>
+        <translation>Verifieër boodskappe om seker te maak dat dit met die gespesifiseerde ConbiniCoin adresse</translation>
     </message>
     <message>
         <source>&amp;Help</source>
@@ -210,8 +210,8 @@
         <translation>Orebalk</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and litecoinz: URIs)</source>
-        <translation>Versoek betalings (genereer QR-kodes en litecoinz: URI's)</translation>
+        <source>Request payments (generates QR codes and conbinicoin: URIs)</source>
+        <translation>Versoek betalings (genereer QR-kodes en conbinicoin: URI's)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -222,8 +222,8 @@
         <translation>Vertoon die lys van gebruikte ontvangers-adresse en etikette</translation>
     </message>
     <message>
-        <source>Open a litecoinz: URI or payment request</source>
-        <translation>Skep 'n litecoinz: URI of betalingsversoek</translation>
+        <source>Open a conbinicoin: URI or payment request</source>
+        <translation>Skep 'n conbinicoin: URI of betalingsversoek</translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -710,8 +710,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>LitecoinZ Core</source>
-        <translation>LitecoinZ Kern</translation>
+        <source>ConbiniCoin Core</source>
+        <translation>ConbiniCoin Kern</translation>
     </message>
     <message>
         <source>Information</source>

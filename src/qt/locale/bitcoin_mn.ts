@@ -126,7 +126,7 @@
         <translation>Оношилгоо ба засварын консолыг онгойлго</translation>
     </message>
     <message>
-        <source>LitecoinZ</source>
+        <source>ConbiniCoin</source>
         <translation>Биткойн</translation>
     </message>
     <message>

@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2014 The Bitcoin Core developers
-// Copyright (c) 2017-2018 The LitecoinZ developers
+// Copyright (c) 2017-2018 The LitecoinZ and ConbiniCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -192,7 +192,7 @@ void Shutdown()
     /// for example if the data directory was found to be locked.
     /// Be sure that anything that writes files or flushes caches only does this if the respective
     /// module was initialized.
-    RenameThread("litecoinz-shutoff");
+    RenameThread("conbinicoin-shutoff");
     mempool.AddTransactionsUpdated(1);
 
     StopHTTPRPC();
@@ -347,8 +347,8 @@ std::string HelpMessage(HelpMessageMode mode)
     strUsage += HelpMessageOpt("-blocknotify=<cmd>", _("Execute command when the best block changes (%s in cmd is replaced by block hash)"));
     strUsage += HelpMessageOpt("-checkblocks=<n>", strprintf(_("How many blocks to check at startup (default: %u, 0 = all)"), 288));
     strUsage += HelpMessageOpt("-checklevel=<n>", strprintf(_("How thorough the block verification of -checkblocks is (0-4, default: %u)"), 3));
-    strUsage += HelpMessageOpt("-conf=<file>", strprintf(_("Specify configuration file (default: %s)"), "litecoinz.conf"));
-    if (mode == HMM_LITECOINZD)
+    strUsage += HelpMessageOpt("-conf=<file>", strprintf(_("Specify configuration file (default: %s)"), "conbinicoin.conf"));
+    if (mode == HMM_CONBINICOIND)
     {
 #if !defined(WIN32)
         strUsage += HelpMessageOpt("-daemon", _("Run in the background as a daemon and accept commands"));
@@ -365,7 +365,7 @@ std::string HelpMessage(HelpMessageMode mode)
     strUsage += HelpMessageOpt("-par=<n>", strprintf(_("Set the number of script verification threads (%u to %d, 0 = auto, <0 = leave that many cores free, default: %d)"),
         -GetNumCores(), MAX_SCRIPTCHECK_THREADS, DEFAULT_SCRIPTCHECK_THREADS));
 #ifndef WIN32
-    strUsage += HelpMessageOpt("-pid=<file>", strprintf(_("Specify pid file (default: %s)"), "litecoinzd.pid"));
+    strUsage += HelpMessageOpt("-pid=<file>", strprintf(_("Specify pid file (default: %s)"), "conbinicoind.pid"));
 #endif
     strUsage += HelpMessageOpt("-prune=<n>", strprintf(_("Reduce storage requirements by pruning (deleting) old blocks. This mode disables wallet support and is incompatible with -txindex. "
             "Warning: Reverting this setting requires re-downloading the entire blockchain. "
@@ -529,7 +529,7 @@ std::string HelpMessage(HelpMessageMode mode)
     // Disabled until we can lock notes and also tune performance of libsnark which by default uses multiple threads
     //strUsage += HelpMessageOpt("-rpcasyncthreads=<n>", strprintf(_("Set the number of threads to service Async RPC calls (default: %d)"), 1));
 
-    if (mode == HMM_LITECOINZD) {
+    if (mode == HMM_CONBINICOIND) {
         strUsage += HelpMessageGroup(_("Metrics Options (only if -daemon and -printtoconsole are not set):"));
         strUsage += HelpMessageOpt("-showmetrics", _("Show metrics on stdout (default: 1 if running in a console, 0 otherwise)"));
         strUsage += HelpMessageOpt("-metricsui", _("Set to 1 for a persistent metrics screen, 0 for sequential metrics output (default: 1 if running in a console, 0 otherwise)"));
@@ -605,7 +605,7 @@ void CleanupBlockRevFiles()
 
 void ThreadImport(std::vector<boost::filesystem::path> vImportFiles)
 {
-    RenameThread("litecoinz-loadblk");
+    RenameThread("conbinicoin-loadblk");
     // -reindex
     if (fReindex) {
         CImportingNow imp;
@@ -687,41 +687,25 @@ static void ZC_LoadParams()
 
     if(!(boost::filesystem::is_directory(ZC_GetParamsDir())))
     {
-        // Create the 'litecoinz-params' directory or the 'LitecoinZParams' folder
+        // Create the 'conbinicoin-params' directory or the 'ConbiniCoinParams' folder
         TryCreateDirectory(ZC_GetParamsDir());
     }
 
     if(boost::filesystem::exists(pk_path))
     {
         // Verify the 'sprout-proving.key' file
-        LTZ_VerifyParams(pk_path.string(), "8bc20a7f013b2b58970cddd2e7ea028975c88ae7ceb9259a5344a16bc2c0eef7");
-    }
-
-    if(!(boost::filesystem::exists(pk_path)))
-    {
-        // Download the 'sprout-proving.key' file
-        LTZ_FetchParams("https://litecoinz.info/downloads/sprout-proving.key", pk_path.string());
-        // Verify the 'sprout-proving.key' file after download
-        LTZ_VerifyParams(pk_path.string(), "8bc20a7f013b2b58970cddd2e7ea028975c88ae7ceb9259a5344a16bc2c0eef7");
+        CONBINI_VerifyParams(pk_path.string(), "8bc20a7f013b2b58970cddd2e7ea028975c88ae7ceb9259a5344a16bc2c0eef7");
     }
 
     if(boost::filesystem::exists(vk_path))
     {
         // Verify the 'sprout-verifying.key' file
-        LTZ_VerifyParams(vk_path.string(), "4bd498dae0aacfd8e98dc306338d017d9c08dd0918ead18172bd0aec2fc5df82");
-    }
-
-    if(!(boost::filesystem::exists(vk_path)))
-    {
-        // Download the 'sprout-verifying.key' file
-        LTZ_FetchParams("https://litecoinz.info/downloads/sprout-verifying.key", vk_path.string());
-        // Verify the 'sprout-proving.key' file after download
-        LTZ_VerifyParams(vk_path.string(), "4bd498dae0aacfd8e98dc306338d017d9c08dd0918ead18172bd0aec2fc5df82");
+        CONBINI_VerifyParams(vk_path.string(), "4bd498dae0aacfd8e98dc306338d017d9c08dd0918ead18172bd0aec2fc5df82");
     }
 
     if (!(boost::filesystem::exists(pk_path) && boost::filesystem::exists(vk_path))) {
         uiInterface.ThreadSafeMessageBox(strprintf(
-            _("Cannot find the LitecoinZ network parameters in the following directory:\n"
+            _("Cannot find the ConbiniCoin network parameters in the following directory:\n"
               "%s\n"
 #ifndef WIN32
               "Please run 'zcash-fetch-params' or './zcutil/fetch-params.sh' and then restart."
@@ -823,7 +807,7 @@ void InitLogging()
     fLogIPs = GetBoolArg("-logips", DEFAULT_LOGIPS);
 
     LogPrintf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-    LogPrintf("LitecoinZ version %s (%s)\n", FormatFullVersion(), CLIENT_DATE);
+    LogPrintf("ConbiniCoin version %s (%s)\n", FormatFullVersion(), CLIENT_DATE);
 }
 
 /** Initialize bitcoin.
@@ -1103,7 +1087,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
 
     // Sanity check
     if (!InitSanityCheck())
-        return InitError(_("Initialization sanity check failed. LitecoinZ is shutting down."));
+        return InitError(_("Initialization sanity check failed. ConbiniCoin is shutting down."));
 
     std::string strDataDir = GetDataDir().string();
 #ifdef ENABLE_WALLET
@@ -1119,9 +1103,9 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
     try {
         static boost::interprocess::file_lock lock(pathLockFile.string().c_str());
         if (!lock.try_lock())
-            return InitError(strprintf(_("Cannot obtain a lock on data directory %s. LitecoinZ is probably already running."), strDataDir));
+            return InitError(strprintf(_("Cannot obtain a lock on data directory %s. ConbiniCoin is probably already running."), strDataDir));
     } catch(const boost::interprocess::interprocess_exception& e) {
-        return InitError(strprintf(_("Cannot obtain a lock on data directory %s. LitecoinZ is probably already running.") + " %s.", strDataDir, e.what()));
+        return InitError(strprintf(_("Cannot obtain a lock on data directory %s. ConbiniCoin is probably already running.") + " %s.", strDataDir, e.what()));
     }
 
 #ifndef WIN32
@@ -1171,7 +1155,7 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
     libsnark::inhibit_profiling_info = true;
     libsnark::inhibit_profiling_counters = true;
 
-    // Initialize LitecoinZ circuit parameters
+    // Initialize ConbiniCoin circuit parameters
     ZC_LoadParams();
 
     /* Start the RPC server already.  It will be started in "warmup" mode
@@ -1549,10 +1533,10 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
                 InitWarning(msg);
             }
             else if (nLoadWalletRet == DB_TOO_NEW)
-                strErrors << _("Error loading wallet.dat: Wallet requires newer version of LitecoinZ") << "\n";
+                strErrors << _("Error loading wallet.dat: Wallet requires newer version of ConbiniCoin") << "\n";
             else if (nLoadWalletRet == DB_NEED_REWRITE)
             {
-                strErrors << _("Wallet needed to be rewritten: restart LitecoinZ to complete") << "\n";
+                strErrors << _("Wallet needed to be rewritten: restart ConbiniCoin to complete") << "\n";
                 LogPrintf("%s", strErrors.str());
                 return InitError(strErrors.str());
             }
@@ -1653,10 +1637,10 @@ bool AppInit2(boost::thread_group& threadGroup, CScheduler& scheduler)
 #ifdef ENABLE_MINING
  #ifndef ENABLE_WALLET
     if (GetBoolArg("-minetolocalwallet", false)) {
-        return InitError(_("LitecoinZ was not built with wallet support. Set -minetolocalwallet=0 to use -mineraddress, or rebuild LitecoinZ with wallet support."));
+        return InitError(_("ConbiniCoin was not built with wallet support. Set -minetolocalwallet=0 to use -mineraddress, or rebuild ConbiniCoin with wallet support."));
     }
     if (GetArg("-mineraddress", "").empty() && GetBoolArg("-gen", false)) {
-        return InitError(_("LitecoinZ was not built with wallet support. Set -mineraddress, or rebuild LitecoinZ with wallet support."));
+        return InitError(_("ConbiniCoin was not built with wallet support. Set -mineraddress, or rebuild ConbiniCoin with wallet support."));
     }
  #endif // !ENABLE_WALLET
 

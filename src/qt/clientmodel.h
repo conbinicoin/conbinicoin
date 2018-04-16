@@ -34,7 +34,7 @@ enum NumConnections {
     CONNECTIONS_ALL  = (CONNECTIONS_IN | CONNECTIONS_OUT),
 };
 
-/** Model for LitecoinZ network client. */
+/** Model for ConbiniCoin network client. */
 class ClientModel : public QObject
 {
     Q_OBJECT

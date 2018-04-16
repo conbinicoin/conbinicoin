@@ -1,5 +1,5 @@
 // Copyright (c) 2014 The Bitcoin Core developers
-// Copyright (c) 2017-2018 The LitecoinZ developers
+// Copyright (c) 2017-2018 The LitecoinZ and ConbiniCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -17,7 +17,7 @@
 #include "compat/endian.h"
 
 #if defined(NDEBUG)
-# error "LitecoinZ cannot be compiled without assertions."
+# error "ConbiniCoin cannot be compiled without assertions."
 #endif
 
 uint16_t static inline ReadLE16(const unsigned char* ptr)

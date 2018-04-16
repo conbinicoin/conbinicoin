@@ -39,7 +39,7 @@
     <item row="3" column="1">
      <widget class="QLabel" name="messageTextLabel">
       <property name="toolTip">
-       <string>A message that was attached to the litecoinz: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the LitecoinZ network.</string>
+       <string>A message that was attached to the conbinicoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the ConbiniCoin network.</string>
       </property>
       <property name="textFormat">
        <enum>Qt::PlainText</enum>
@@ -113,7 +113,7 @@
       <item>
        <widget class="QCheckBox" name="checkboxSubtractFeeFromAmount">
         <property name="toolTip">
-         <string>The fee will be deducted from the amount being sent. The recipient will receive less litecoinzs than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</string>
+         <string>The fee will be deducted from the amount being sent. The recipient will receive less conbinicoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</string>
         </property>
         <property name="text">
          <string>S&amp;ubtract fee from amount</string>
@@ -147,7 +147,7 @@
       <item>
        <widget class="QValidatedLineEdit" name="payTo">
         <property name="toolTip">
-         <string>The LitecoinZ address to send the payment to</string>
+         <string>The ConbiniCoin address to send the payment to</string>
         </property>
        </widget>
       </item>

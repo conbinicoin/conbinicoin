@@ -7,9 +7,9 @@ User=bitcoin
 Group=bitcoin
 
 Type=forking
-PIDFile=/var/lib/litecoinzd/litecoinzd.pid
-ExecStart=/usr/bin/litecoinzd -daemon -pid=/var/lib/litecoinzd/litecoinzd.pid \
--conf=/etc/bitcoin/bitcoin.conf -datadir=/var/lib/litecoinzd -disablewallet
+PIDFile=/var/lib/conbinicoind/conbinicoind.pid
+ExecStart=/usr/bin/conbinicoind -daemon -pid=/var/lib/conbinicoind/conbinicoind.pid \
+-conf=/etc/bitcoin/bitcoin.conf -datadir=/var/lib/conbinicoind -disablewallet
 
 Restart=always
 PrivateTmp=true

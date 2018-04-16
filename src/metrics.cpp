@@ -276,7 +276,7 @@ int printMiningStatus(bool mining)
         lines++;
     } else {
         std::cout << ANSI_COLOR_LRED << _("You are currently not mining.") << ANSI_COLOR_RESET << std::endl;
-        std::cout << ANSI_COLOR_LYELLOW << _("To enable mining, add 'gen=1' to your litecoinz.conf and restart.") << ANSI_COLOR_RESET << std::endl;
+        std::cout << ANSI_COLOR_LYELLOW << _("To enable mining, add 'gen=1' to your conbinicoin.conf and restart.") << ANSI_COLOR_RESET << std::endl;
         lines += 2;
     }
     std::cout << std::endl;
@@ -434,7 +434,7 @@ int printInitMessage()
 void ThreadShowMetricsScreen()
 {
     // Make this thread recognisable as the metrics screen thread
-    RenameThread("litecoinz-metrics-screen");
+    RenameThread("conbinicoin-metrics-screen");
 
     // Determine whether we should render a persistent UI or rolling metrics
     bool isTTY = isatty(STDOUT_FILENO);
@@ -455,7 +455,7 @@ void ThreadShowMetricsScreen()
         std::cout << "\e[1;1H\e[2J";
 
         // Thank you text
-        std::cout << ANSI_COLOR_LGREEN << _("Thank you for running a LitecoinZ node!") << ANSI_COLOR_RESET << std::endl;
+        std::cout << ANSI_COLOR_LGREEN << _("Thank you for running a ConbiniCoin node!") << ANSI_COLOR_RESET << std::endl;
         std::cout << std::endl;
     }
 

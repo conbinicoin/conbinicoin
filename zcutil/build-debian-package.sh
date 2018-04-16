@@ -6,7 +6,7 @@ set -e
 set -x
 
 BUILD_PATH="/tmp/zcbuild"
-PACKAGE_NAME="litecoinz"
+PACKAGE_NAME="conbinicoin"
 SRC_PATH=`pwd`
 SRC_DEB=$SRC_PATH/contrib/debian
 SRC_DOC=$SRC_PATH/doc
@@ -17,7 +17,7 @@ if [ ! -d $BUILD_PATH ]; then
     mkdir $BUILD_PATH
 fi
 
-PACKAGE_VERSION=$($SRC_PATH/src/litecoinzd --version | grep version | cut -d' ' -f4 | tr -d v)
+PACKAGE_VERSION=$($SRC_PATH/src/conbinicoind --version | grep version | cut -d' ' -f4 | tr -d v)
 DEBVERSION=$(echo $PACKAGE_VERSION | sed 's/-beta/~beta/' | sed 's/-rc/~rc/' | sed 's/-/+/')
 BUILD_DIR="$BUILD_PATH/$PACKAGE_NAME-$PACKAGE_VERSION-amd64"
 
@@ -38,39 +38,39 @@ chmod 0755 -R $BUILD_DIR/*
 #cp $SRC_DEB/preinst $BUILD_DIR/DEBIAN
 #cp $SRC_DEB/prerm $BUILD_DIR/DEBIAN
 # Copy binaries
-cp $SRC_PATH/src/litecoinzd $DEB_BIN
-cp $SRC_PATH/src/litecoinz-cli $DEB_BIN
-cp $SRC_PATH/src/litecoinz-tx $DEB_BIN
-cp $SRC_PATH/src/litecoinz-addrgen $DEB_BIN
-cp $SRC_PATH/src/qt/litecoinz-qt $DEB_BIN
-cp $SRC_PATH/zcutil/fetch-params.sh $DEB_BIN/litecoinz-fetch-params
+cp $SRC_PATH/src/conbinicoind $DEB_BIN
+cp $SRC_PATH/src/conbinicoin-cli $DEB_BIN
+cp $SRC_PATH/src/conbinicoin-tx $DEB_BIN
+cp $SRC_PATH/src/conbinicoin-addrgen $DEB_BIN
+cp $SRC_PATH/src/qt/conbinicoin-qt $DEB_BIN
+cp $SRC_PATH/zcutil/fetch-params.sh $DEB_BIN/conbinicoin-fetch-params
 # Copy docs
 cp $SRC_PATH/doc/release-notes/release-notes-1.0.15.md $DEB_DOC/changelog
 cp $SRC_DEB/changelog $DEB_DOC/changelog.Debian
 cp $SRC_DEB/copyright $DEB_DOC
 cp -r $SRC_DEB/examples $DEB_DOC
 # Copy manpages
-cp $SRC_DOC/man/litecoinzd.1 $DEB_MAN
-cp $SRC_DOC/man/litecoinz-cli.1 $DEB_MAN
-cp $SRC_DOC/man/litecoinz-tx.1 $DEB_MAN
-cp $SRC_DOC/man/litecoinz-qt.1 $DEB_MAN
-cp $SRC_DOC/man/litecoinz-fetch-params.1 $DEB_MAN
+cp $SRC_DOC/man/conbinicoind.1 $DEB_MAN
+cp $SRC_DOC/man/conbinicoin-cli.1 $DEB_MAN
+cp $SRC_DOC/man/conbinicoin-tx.1 $DEB_MAN
+cp $SRC_DOC/man/conbinicoin-qt.1 $DEB_MAN
+cp $SRC_DOC/man/conbinicoin-fetch-params.1 $DEB_MAN
 # Copy bash completion files
-cp $SRC_PATH/contrib/litecoinzd.bash-completion $DEB_CMP/litecoinzd
-cp $SRC_PATH/contrib/litecoinz-cli.bash-completion $DEB_CMP/litecoinz-cli
+cp $SRC_PATH/contrib/conbinicoind.bash-completion $DEB_CMP/conbinicoind
+cp $SRC_PATH/contrib/conbinicoin-cli.bash-completion $DEB_CMP/conbinicoin-cli
 # Gzip files
 gzip --best -n $DEB_DOC/changelog
 gzip --best -n $DEB_DOC/changelog.Debian
-gzip --best -n $DEB_MAN/litecoinzd.1
-gzip --best -n $DEB_MAN/litecoinz-cli.1
-gzip --best -n $DEB_MAN/litecoinz-qt.1
-gzip --best -n $DEB_MAN/litecoinz-fetch-params.1
+gzip --best -n $DEB_MAN/conbinicoind.1
+gzip --best -n $DEB_MAN/conbinicoin-cli.1
+gzip --best -n $DEB_MAN/conbinicoin-qt.1
+gzip --best -n $DEB_MAN/conbinicoin-fetch-params.1
 
 cd $SRC_PATH/contrib
 
 # Create the control file
-strip $DEB_BIN/litecoinzd $DEB_BIN/litecoinz-cli $DEB_BIN/litecoinz-tx $DEB_BIN/litecoinz-addrgen
-dpkg-shlibdeps $DEB_BIN/litecoinzd $DEB_BIN/litecoinz-cli $DEB_BIN/litecoinz-tx $DEB_BIN/litecoinz-addrgen
+strip $DEB_BIN/conbinicoind $DEB_BIN/conbinicoin-cli $DEB_BIN/conbinicoin-tx $DEB_BIN/conbinicoin-addrgen
+dpkg-shlibdeps $DEB_BIN/conbinicoind $DEB_BIN/conbinicoin-cli $DEB_BIN/conbinicoin-tx $DEB_BIN/conbinicoin-addrgen
 dpkg-gencontrol -P$BUILD_DIR -v$DEBVERSION
 
 # Create the Debian package

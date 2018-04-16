@@ -378,7 +378,7 @@ QString TransactionDesc::tToHTML(CWallet *wallet, CWalletTx &wtx, TransactionRec
     strHTML += "<b>" + tr("Transaction ID") + ":</b> " + rec->getTxID() + "<br>";
     strHTML += "<b>" + tr("Output index") + ":</b> " + QString::number(rec->getOutputIndex()) + "<br>";
 
-    // Message from normal litecoinz:URI (litecoinz:123...?message=example)
+    // Message from normal conbinicoin:URI (conbinicoin:123...?message=example)
     Q_FOREACH (const PAIRTYPE(std::string, std::string)& r, wtx.vOrderForm)
         if (r.first == "Message")
             strHTML += "<br><b>" + tr("Message") + ":</b><br>" + GUIUtil::HtmlEscape(r.second, true) + "<br>";

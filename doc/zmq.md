@@ -5,8 +5,8 @@ connections, inter-process communication, and shared-memory,
 providing various message-oriented semantics such as publish/subcribe,
 request/reply, and push/pull.
 
-The LitecoinZ daemon can be configured to act as a trusted "border
-router", implementing the litecoinz wire protocol and relay, making
+The ConbiniCoin daemon can be configured to act as a trusted "border
+router", implementing the conbinicoin wire protocol and relay, making
 consensus decisions, maintaining the local blockchain database,
 broadcasting locally generated transactions into the network, and
 providing a queryable RPC interface to interact on a polled basis for
@@ -33,7 +33,7 @@ buffering or reassembly.
 
 ## Prerequisites
 
-The ZeroMQ feature in LitecoinZ requires ZeroMQ API version 4.x or
+The ZeroMQ feature in ConbiniCoin requires ZeroMQ API version 4.x or
 newer, which you will need to install if you are not using the depends
 system. Typically, it is packaged by distributions as something like
 *libzmq5-dev*. The C++ wrapper for ZeroMQ is *not* needed.
@@ -46,7 +46,7 @@ operation.
 
 By default, the ZeroMQ feature is automatically compiled in if the
 necessary prerequisites are found.  To disable, use --disable-zmq
-during the *configure* step of building litecoinzd:
+during the *configure* step of building conbinicoind:
 
     $ ./configure --disable-zmq (other options)
 
@@ -67,8 +67,8 @@ address. The same address can be used in more than one notification.
 
 For instance:
 
-    $ litecoinzd -zmqpubhashtx=tcp://127.0.0.1:28332 \
-               -zmqpubrawtx=ipc:///tmp/litecoinzd.tx.raw
+    $ conbinicoind -zmqpubhashtx=tcp://127.0.0.1:28332 \
+               -zmqpubrawtx=ipc:///tmp/conbinicoind.tx.raw
 
 Each PUB notification has a topic and body, where the header
 corresponds to the notification type. For instance, for the
@@ -76,7 +76,7 @@ notification `-zmqpubhashtx` the topic is `hashtx` (no null
 terminator) and the body is the hexadecimal transaction hash (32
 bytes).
 
-These options can also be provided in litecoinz.conf.
+These options can also be provided in conbinicoin.conf.
 
 ZeroMQ endpoint specifiers for TCP (and others) are documented in the
 [ZeroMQ API](http://api.zeromq.org/4-0:_start).
@@ -88,9 +88,9 @@ arriving. Please see `contrib/zmq/zmq_sub.py` for a working example.
 
 ## Remarks
 
-From the perspective of litecoinzd, the ZeroMQ socket is write-only; PUB
+From the perspective of conbinicoind, the ZeroMQ socket is write-only; PUB
 sockets don't even have a read function. Thus, there is no state
-introduced into litecoinzd directly. Furthermore, no information is
+introduced into conbinicoind directly. Furthermore, no information is
 broadcast that wasn't already received from the public P2P network.
 
 No authentication or authorization is done on connecting clients; it

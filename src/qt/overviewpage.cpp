@@ -28,7 +28,7 @@ class TxViewDelegate : public QAbstractItemDelegate
     Q_OBJECT
 public:
     TxViewDelegate(const PlatformStyle *platformStyle, QObject *parent=nullptr):
-        QAbstractItemDelegate(parent), unit(BitcoinUnits::LTZ),
+        QAbstractItemDelegate(parent), unit(BitcoinUnits::CONBINI),
         platformStyle(platformStyle)
     {
 
@@ -260,7 +260,7 @@ void OverviewPage::setWalletModel(WalletModel *model)
         connect(model, SIGNAL(notifyWatchonlyChanged(bool)), this, SLOT(updateWatchOnlyLabels(bool)));
     }
 
-    // update the display unit, to not use the default ("LTZ")
+    // update the display unit, to not use the default ("CONBINI")
     updateDisplayUnit();
 }
 

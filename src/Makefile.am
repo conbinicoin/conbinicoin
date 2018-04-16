@@ -1,5 +1,5 @@
 # Copyright (c) 2013-2016 The Bitcoin Core developers
-# Copyright (c) 2017-2018 The LitecoinZ developers
+# Copyright (c) 2017-2018 The LitecoinZ and ConbiniCoin developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -104,11 +104,11 @@ noinst_PROGRAMS =
 TESTS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += litecoinzd
+  bin_PROGRAMS += conbinicoind
 endif
 
 if BUILD_BITCOIN_UTILS
-  bin_PROGRAMS += litecoinz-cli litecoinz-tx litecoinz-addrgen
+  bin_PROGRAMS += conbinicoin-cli conbinicoin-tx conbinicoin-addrgen
 endif
 
 LIBZCASH_H = \
@@ -242,7 +242,7 @@ obj/build.h: FORCE
 	  $(abs_top_srcdir)
 libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between litecoinzd and litecoinz-qt
+# server: shared between conbinicoind and conbinicoin-qt
 libbitcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 libbitcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_server_a_SOURCES = \
@@ -310,7 +310,7 @@ libbitcoin_proton_a_SOURCES = \
   amqp/amqppublishnotifier.cpp
 endif
 
-# wallet: shared between bitcoind and litecoinz-qt, but only linked
+# wallet: shared between bitcoind and conbinicoin-qt, but only linked
 # when wallet enabled
 libbitcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
@@ -378,7 +378,7 @@ crypto_libbitcoin_crypto_a_SOURCES += \
   ${EQUIHASH_TROMP_SOURCES}
 endif
 
-# common: shared between litecoinzd, litecoinz-qt and non-server tools
+# common: shared between conbinicoind, conbinicoin-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_common_a_SOURCES = \
@@ -437,7 +437,7 @@ if GLIBC_BACK_COMPAT
 libbitcoin_util_a_SOURCES += compat/glibc_compat.cpp
 endif
 
-# cli: shared between litecoinz-cli and litecoinz-qt
+# cli: shared between conbinicoin-cli and conbinicoin-qt
 libbitcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_cli_a_SOURCES = \
@@ -448,17 +448,17 @@ libbitcoin_cli_a_SOURCES = \
 nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
-# litecoinzd binary #
-litecoinzd_SOURCES = litecoinzd.cpp
-litecoinzd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-litecoinzd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-litecoinzd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# conbinicoind binary #
+conbinicoind_SOURCES = conbinicoind.cpp
+conbinicoind_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+conbinicoind_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+conbinicoind_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-litecoinzd_SOURCES += litecoinzd-res.rc
+conbinicoind_SOURCES += conbinicoind-res.rc
 endif
 
-litecoinzd_LDADD = \
+conbinicoind_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_COMMON) \
   $(LIBUNIVALUE) \
@@ -471,14 +471,14 @@ litecoinzd_LDADD = \
   $(LIBSECP256K1)
 
 if ENABLE_ZMQ
-litecoinzd_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+conbinicoind_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 endif
 
 if ENABLE_WALLET
-litecoinzd_LDADD += libbitcoin_wallet.a
+conbinicoind_LDADD += libbitcoin_wallet.a
 endif
 
-litecoinzd_LDADD += \
+conbinicoind_LDADD += \
   $(BOOST_LIBS) \
   $(BDB_LIBS) \
   $(SSL_LIBS) \
@@ -490,20 +490,20 @@ litecoinzd_LDADD += \
   $(CURL_LIBS)
 
 if ENABLE_PROTON
-litecoinzd_LDADD += $(LIBBITCOIN_PROTON) $(PROTON_LIBS)
+conbinicoind_LDADD += $(LIBBITCOIN_PROTON) $(PROTON_LIBS)
 endif
 
-# litecoinz-cli binary #
-litecoinz_cli_SOURCES = litecoinz-cli.cpp
-litecoinz_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-litecoinz_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-litecoinz_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# conbinicoin-cli binary #
+conbinicoin_cli_SOURCES = conbinicoin-cli.cpp
+conbinicoin_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+conbinicoin_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+conbinicoin_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-litecoinz_cli_SOURCES += litecoinz-cli-res.rc
+conbinicoin_cli_SOURCES += conbinicoin-cli-res.rc
 endif
 
-litecoinz_cli_LDADD = \
+conbinicoin_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
@@ -517,18 +517,18 @@ litecoinz_cli_LDADD = \
   $(LIBZCASH_LIBS)
 #
 
-# litecoinz-tx binary #
-litecoinz_tx_SOURCES = litecoinz-tx.cpp
-litecoinz_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-litecoinz_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-litecoinz_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# conbinicoin-tx binary #
+conbinicoin_tx_SOURCES = conbinicoin-tx.cpp
+conbinicoin_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+conbinicoin_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+conbinicoin_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-litecoinz_tx_SOURCES += litecoinz-tx-res.rc
+conbinicoin_tx_SOURCES += conbinicoin-tx-res.rc
 endif
 
-# FIXME: Is libzcash needed for litecoinz_tx?
-litecoinz_tx_LDADD = \
+# FIXME: Is libzcash needed for conbinicoin_tx?
+conbinicoin_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
@@ -538,20 +538,20 @@ litecoinz_tx_LDADD = \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBZCASH_LIBS)
 
-litecoinz_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+conbinicoin_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
-# litecoinz-addrgen
-litecoinz_addrgen_SOURCES = litecoinz-addrgen.cpp
-litecoinz_addrgen_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-litecoinz_addrgen_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-litecoinz_addrgen_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# conbinicoin-addrgen
+conbinicoin_addrgen_SOURCES = conbinicoin-addrgen.cpp
+conbinicoin_addrgen_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+conbinicoin_addrgen_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+conbinicoin_addrgen_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-litecoinz_addrgen_SOURCES += litecoinz-addrgen-res.rc
+conbinicoin_addrgen_SOURCES += conbinicoin-addrgen-res.rc
 endif
 
-litecoinz_addrgen_LDADD = \
+conbinicoin_addrgen_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
@@ -561,10 +561,10 @@ litecoinz_addrgen_LDADD = \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBZCASH_LIBS)
 
-litecoinz_addrgen_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+conbinicoin_addrgen_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
-# litecoinz protocol primitives #
+# conbinicoin protocol primitives #
 libzcash_a_SOURCES = \
   zcash/IncrementalMerkleTree.cpp \
   zcash/NoteEncryption.cpp \

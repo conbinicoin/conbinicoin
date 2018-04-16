@@ -17,9 +17,9 @@ BitcoinUnits::BitcoinUnits(QObject *parent):
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(LTZ);
-    unitlist.append(mLTZ);
-    unitlist.append(uLTZ);
+    unitlist.append(CONBINI);
+    unitlist.append(mCONBINI);
+    unitlist.append(uCONBINI);
     return unitlist;
 }
 
@@ -27,9 +27,9 @@ bool BitcoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case LTZ:
-    case mLTZ:
-    case uLTZ:
+    case CONBINI:
+    case mCONBINI:
+    case uCONBINI:
         return true;
     default:
         return false;
@@ -40,9 +40,9 @@ QString BitcoinUnits::name(int unit)
 {
     switch(unit)
     {
-    case LTZ: return QString("LTZ");
-    case mLTZ: return QString("mLTZ");
-    case uLTZ: return QString::fromUtf8("μLTZ");
+    case CONBINI: return QString("CONBINI");
+    case mCONBINI: return QString("mCONBINI");
+    case uCONBINI: return QString::fromUtf8("μCONBINI");
     default: return QString("???");
     }
 }
@@ -51,9 +51,9 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case LTZ: return QString("Litecoinzs");
-    case mLTZ: return QString("Milli-Litecoinzs (1 / 1" THIN_SP_UTF8 "000)");
-    case uLTZ: return QString("Micro-Litecoinzs (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case CONBINI: return QString("Conbinicoin");
+    case mCONBINI: return QString("Milli-Conbinicoin (1 / 1" THIN_SP_UTF8 "000)");
+    case uCONBINI: return QString("Micro-Conbinicoin (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
 }
@@ -62,9 +62,9 @@ qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case LTZ:  return 100000000;
-    case mLTZ: return 100000;
-    case uLTZ: return 100;
+    case CONBINI:  return 100000000;
+    case mCONBINI: return 100000;
+    case uCONBINI: return 100;
     default:   return 100000000;
     }
 }
@@ -73,9 +73,9 @@ int BitcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case LTZ: return 8;
-    case mLTZ: return 5;
-    case uLTZ: return 2;
+    case CONBINI: return 8;
+    case mCONBINI: return 5;
+    case uCONBINI: return 2;
     default: return 0;
     }
 }

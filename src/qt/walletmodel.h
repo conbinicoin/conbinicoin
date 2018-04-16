@@ -98,7 +98,7 @@ public:
     }
 };
 
-/** Interface to LitecoinZ wallet from Qt view code. */
+/** Interface to ConbiniCoin wallet from Qt view code. */
 class WalletModel : public QObject
 {
     Q_OBJECT

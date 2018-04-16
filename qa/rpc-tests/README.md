@@ -23,9 +23,9 @@ Possible options:
 
 ```
 -h, --help       show this help message and exit
-  --nocleanup      Leave litecoinzds and test.* datadir on exit or error
-  --noshutdown     Don't stop litecoinzds after the test execution
-  --srcdir=SRCDIR  Source directory containing litecoinzd/litecoinz-cli (default:
+  --nocleanup      Leave conbinicoinds and test.* datadir on exit or error
+  --noshutdown     Don't stop conbinicoinds after the test execution
+  --srcdir=SRCDIR  Source directory containing conbinicoind/conbinicoin-cli (default:
                    ../../src)
   --tmpdir=TMPDIR  Root directory for datadirs
   --tracerpc       Print out all RPC calls as they are made
@@ -47,5 +47,5 @@ to recover with:
 
 ```bash
 rm -rf cache
-killall litecoinzd
+killall conbinicoind
 ```

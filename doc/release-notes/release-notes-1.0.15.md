@@ -12,19 +12,19 @@ Auto download of parameter files
 
 Parameter files 'sprout-verifying.key' and 'sprout-proving.key' are now download 
 at startup if needed. This means that you no longer need to run the 'fetch-params.sh'
-command before running LitecoinZ.
+command before running ConbiniCoin.
 
 Configuration file requirement
 ------------------------------
 
-Now it's possible to run LitecoinZ without having created the configuration file
-'litecoinz.conf'. Default values are used at startup and cookie based authentication
+Now it's possible to run ConbiniCoin without having created the configuration file
+'conbinicoin.conf'. Default values are used at startup and cookie based authentication
 is used for RPC calls.
 
 Transaction Fees
 ----------------
 
-Actual async operation fee are reduced to 0.00001 LTZ.
+Actual async operation fee are reduced to 0.00001 CONBINI.
 
 Changelog
 =========
@@ -44,7 +44,7 @@ Changelog
 * 6a3eb84 Fix some comments
 * ee88cfb Change output of 'z_sendmany' to json format
 * 17cedeb Remove PrivacyInfo
-* c351951 Allow to run even if 'litecoinz.conf' is missing
+* c351951 Allow to run even if 'conbinicoin.conf' is missing
 * afe11a7 Reduce async operation fee amount
 * 2735af6 Use JoinSplitTestingSetup for Boost sighash tests
 * 5bd9c72 Make indentation in ActivateBestChainStep readable

@@ -1,1 +1,1 @@
-dist_man1_MANS=litecoinzd.1 litecoinz-cli.1 litecoinz-fetch-params.1 litecoinz-tx.1
+dist_man1_MANS=conbinicoind.1 conbinicoin-cli.1 conbinicoin-fetch-params.1 conbinicoin-tx.1

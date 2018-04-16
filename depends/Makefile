@@ -5,7 +5,7 @@ BASE_CACHE ?= $(BASEDIR)/built
 SDK_PATH ?= $(BASEDIR)/SDKs
 NO_QT ?=
 NO_WALLET ?=
-FALLBACK_DOWNLOAD_PATH ?= https://litecoinz.info/depends-sources/
+FALLBACK_DOWNLOAD_PATH ?= https://conbinicoin.com/depends-sources/
 
 BUILD = $(shell ./config.guess)
 HOST ?= $(BUILD)

@@ -3,7 +3,7 @@
 - include: unix.yml
 
 - name: Install grind-specific worker dependencies
-  hosts: litecoinz-ci-worker-unix
+  hosts: conbinicoin-ci-worker-unix
   become: true
 
   vars_files:

@@ -207,8 +207,8 @@ bool Intro::pickDataDirectory()
         settings.setValue("fReset", false);
     }
     /* Only override -datadir if different from the default, to make it possible to
-     * override -datadir in the litecoinz.conf file in the default data directory
-     * (to be consistent with litecoinzd behavior)
+     * override -datadir in the conbinicoin.conf file in the default data directory
+     * (to be consistent with conbinicoind behavior)
      */
     if(dataDir != getDefaultDataDirectory())
         SoftSetArg("-datadir", GUIUtil::qstringToBoostPath(dataDir).string()); // use OS locale for path setting

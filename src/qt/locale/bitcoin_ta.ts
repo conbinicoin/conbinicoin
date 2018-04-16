@@ -90,8 +90,8 @@
         <translation>&amp;செய்தியை சரிசெய்...</translation>
     </message>
     <message>
-        <source>LitecoinZ</source>
-        <translation>LitecoinZ</translation>
+        <source>ConbiniCoin</source>
+        <translation>ConbiniCoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -714,8 +714,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>LitecoinZ Core</source>
-        <translation>LitecoinZ மையம்</translation>
+        <source>ConbiniCoin Core</source>
+        <translation>ConbiniCoin மையம்</translation>
     </message>
     <message>
         <source>(default: %u)</source>

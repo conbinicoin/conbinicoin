@@ -15,7 +15,7 @@ from functools import wraps
 
 def main(args=sys.argv[1:]):
     """
-    Perform the final LitecoinZ release process up to the git tag.
+    Perform the final ConbiniCoin release process up to the git tag.
     """
     opts = parse_args(args)
     chdir_to_repo(opts.REPO)
@@ -291,8 +291,8 @@ def gen_release_notes(release, releasefrom):
 
 @phase('Updating debian changelog.')
 def update_debian_changelog(release):
-    os.environ['DEBEMAIL'] = 'developers@litecoinz.info'
-    os.environ['DEBFULLNAME'] = 'The LitecoinZ Developers'
+    os.environ['DEBEMAIL'] = 'developers@conbinicoin.com'
+    os.environ['DEBFULLNAME'] = 'The ConbiniCoin Developers'
     sh_log(
         'debchange',
         '--newversion', release.debversion,
@@ -319,10 +319,10 @@ def chdir_to_repo(repo):
 def patch_README(release, releaseprev):
     with PathPatcher('README.md') as (inf, outf):
         firstline = inf.readline()
-        assert firstline == 'LitecoinZ {}\n'.format(releaseprev.novtext), \
+        assert firstline == 'ConbiniCoin {}\n'.format(releaseprev.novtext), \
             repr(firstline)
 
-        outf.write('LitecoinZ {}\n'.format(release.novtext))
+        outf.write('ConbiniCoin {}\n'.format(release.novtext))
         outf.write(inf.read())
 
 
@@ -350,11 +350,11 @@ def patch_gitian_linux_yml(release, releaseprev):
         outf.write(inf.readline())
 
         secondline = inf.readline()
-        assert secondline == 'name: "litecoinz-{}"\n'.format(
+        assert secondline == 'name: "conbinicoin-{}"\n'.format(
             releaseprev.novtext
         ), repr(secondline)
 
-        outf.write('name: "litecoinz-{}"\n'.format(release.novtext))
+        outf.write('name: "conbinicoin-{}"\n'.format(release.novtext))
         outf.write(inf.read())
 
 
@@ -380,7 +380,7 @@ def _patch_build_defs(release, path, pattern):
 
 
 def initialize_logging():
-    logname = './litecoinz-make-release.log'
+    logname = './conbinicoin-make-release.log'
     fmtr = logging.Formatter(
         '%(asctime)s L%(lineno)-4d %(levelname)-5s | %(message)s',
         '%Y-%m-%d %H:%M:%S'
@@ -398,7 +398,7 @@ def initialize_logging():
     root.setLevel(logging.DEBUG)
     root.addHandler(hout)
     root.addHandler(hpath)
-    logging.info('litecoinz make-release.py debug log: %r', logname)
+    logging.info('conbinicoin make-release.py debug log: %r', logname)
 
 
 def sh_out(*args):

@@ -11,7 +11,7 @@
   </array>
 
   <key>CFBundleIconFile</key>
-  <string>litecoinz.icns</string>
+  <string>conbinicoin.icns</string>
 
   <key>CFBundlePackageType</key>
   <string>APPL</string>
@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>LitecoinZ-Qt</string>
+  <string>ConbiniCoin-Qt</string>
   
   <key>CFBundleName</key>
-  <string>LitecoinZ-Qt</string>
+  <string>ConbiniCoin-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>info.litecoinz.LitecoinZ-Qt</string>
+  <string>info.conbinicoin.ConbiniCoin-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,10 +46,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>info.litecoinz.LitecoinzPayment</string>
+      <string>info.conbinicoin.LitecoinzPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>LitecoinZ</string>
+        <string>ConbiniCoin</string>
       </array>
     </dict>
   </array>
@@ -58,9 +58,9 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>info.litecoinz.paymentrequest</string>
+      <string>info.conbinicoin.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>LitecoinZ payment request</string>
+      <string>ConbiniCoin payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
@@ -68,10 +68,10 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/x-litecoinz-payment-request</string>
+        <string>application/x-conbinicoin-payment-request</string>
         <key>public.filename-extension</key>
         <array>
-          <string>litecoinzpaymentrequest</string>
+          <string>conbinicoinpaymentrequest</string>
         </array>
       </dict>
     </dict>
@@ -84,7 +84,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>org.litecoinz.paymentrequest</string>
+        <string>org.conbinicoin.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>

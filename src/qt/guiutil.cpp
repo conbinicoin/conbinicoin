@@ -5,7 +5,7 @@
 #include "guiutil.h"
 
 #include "bitcoinaddressvalidator.h"
-#include "litecoinzaddressvalidator.h"
+#include "conbinicoinaddressvalidator.h"
 #include "bitcoinunits.h"
 #include "qvalidatedlineedit.h"
 #include "walletmodel.h"
@@ -133,7 +133,7 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent)
 #if QT_VERSION >= 0x040700
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-    widget->setPlaceholderText(QObject::tr("Enter a LitecoinZ address (e.g. %1)").arg(
+    widget->setPlaceholderText(QObject::tr("Enter a ConbiniCoin address (e.g. %1)").arg(
         QString::fromStdString(DummyAddress(Params()))));
 #endif
     widget->setValidator(new BitcoinAddressEntryValidator(parent));
@@ -148,10 +148,10 @@ void setupZAddressWidget(QValidatedLineEdit *widget, QWidget *parent)
 #if QT_VERSION >= 0x040700
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-    widget->setPlaceholderText(QObject::tr("Enter a LitecoinZ address (e.g. zmrfiKJzgE1AmVXCqyf6RoR1SgyL4FxgwHiNPwJoBYiUQEMDMqwdNVxi6NE25xws3JuxbqWKHhSJ6Gp1r8MZ4osBbQy5Txw)"));
+    widget->setPlaceholderText(QObject::tr("Enter a ConbiniCoin address (e.g. zmrfiKJzgE1AmVXCqyf6RoR1SgyL4FxgwHiNPwJoBYiUQEMDMqwdNVxi6NE25xws3JuxbqWKHhSJ6Gp1r8MZ4osBbQy5Txw)"));
 #endif
-    widget->setValidator(new LitecoinZAddressEntryValidator(parent));
-    widget->setCheckValidator(new LitecoinZAddressCheckValidator(parent));
+    widget->setValidator(new ConbiniCoinAddressEntryValidator(parent));
+    widget->setCheckValidator(new ConbiniCoinAddressCheckValidator(parent));
 }
 
 void setupAmountWidget(QLineEdit *widget, QWidget *parent)
@@ -165,8 +165,8 @@ void setupAmountWidget(QLineEdit *widget, QWidget *parent)
 
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
-    // return if URI is not valid or is no litecoinz: URI
-    if(!uri.isValid() || uri.scheme() != QString("litecoinz"))
+    // return if URI is not valid or is no conbinicoin: URI
+    if(!uri.isValid() || uri.scheme() != QString("conbinicoin"))
         return false;
 
     SendCoinsRecipient rv;
@@ -206,7 +206,7 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
         {
             if(!i->second.isEmpty())
             {
-                if(!BitcoinUnits::parse(BitcoinUnits::LTZ, i->second, &rv.amount))
+                if(!BitcoinUnits::parse(BitcoinUnits::CONBINI, i->second, &rv.amount))
                 {
                     return false;
                 }
@@ -226,13 +226,13 @@ bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 
 bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 {
-    // Convert litecoinz:// to litecoinz:
+    // Convert conbinicoin:// to conbinicoin:
     //
-    //    Cannot handle this later, because litecoinz:// will cause Qt to see the part after // as host,
+    //    Cannot handle this later, because conbinicoin:// will cause Qt to see the part after // as host,
     //    which will lower-case it (and thus invalidate the address).
-    if(uri.startsWith("litecoinz://", Qt::CaseInsensitive))
+    if(uri.startsWith("conbinicoin://", Qt::CaseInsensitive))
     {
-        uri.replace(0, 10, "litecoinz:");
+        uri.replace(0, 10, "conbinicoin:");
     }
     QUrl uriInstance(uri);
     return parseBitcoinURI(uriInstance, out);
@@ -240,12 +240,12 @@ bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 
 QString formatBitcoinURI(const SendCoinsRecipient &info)
 {
-    QString ret = QString("litecoinz:%1").arg(info.address);
+    QString ret = QString("conbinicoin:%1").arg(info.address);
     int paramCount = 0;
 
     if (info.amount)
     {
-        ret += QString("?amount=%1").arg(BitcoinUnits::format(BitcoinUnits::LTZ, info.amount, false, BitcoinUnits::separatorNever));
+        ret += QString("?amount=%1").arg(BitcoinUnits::format(BitcoinUnits::CONBINI, info.amount, false, BitcoinUnits::separatorNever));
         paramCount++;
     }
 
@@ -641,15 +641,15 @@ boost::filesystem::path static StartupShortcutPath()
 {
     std::string chain = ChainNameFromCommandLine();
     if (chain == CBaseChainParams::MAIN)
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "LitecoinZ.lnk";
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "ConbiniCoin.lnk";
     if (chain == CBaseChainParams::TESTNET) // Remove this special case when CBaseChainParams::TESTNET = "testnet3"
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "LitecoinZ (testnet).lnk";
-    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("LitecoinZ (%s).lnk", chain);
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "ConbiniCoin (testnet).lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("ConbiniCoin (%s).lnk", chain);
 }
 
 bool GetStartOnSystemStartup()
 {
-    // check for LitecoinZ*.lnk
+    // check for ConbiniCoin*.lnk
     return boost::filesystem::exists(StartupShortcutPath());
 }
 
@@ -741,8 +741,8 @@ boost::filesystem::path static GetAutostartFilePath()
 {
     std::string chain = ChainNameFromCommandLine();
     if (chain == CBaseChainParams::MAIN)
-        return GetAutostartDir() / "litecoinz.desktop";
-    return GetAutostartDir() / strprintf("litecoinz-%s.lnk", chain);
+        return GetAutostartDir() / "conbinicoin.desktop";
+    return GetAutostartDir() / strprintf("conbinicoin-%s.lnk", chain);
 }
 
 bool GetStartOnSystemStartup()
@@ -781,13 +781,13 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         if (!optionFile.good())
             return false;
         std::string chain = ChainNameFromCommandLine();
-        // Write a litecoinz.desktop file to the autostart directory:
+        // Write a conbinicoin.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         if (chain == CBaseChainParams::MAIN)
-            optionFile << "Name=LitecoinZ\n";
+            optionFile << "Name=ConbiniCoin\n";
         else
-            optionFile << strprintf("Name=LitecoinZ (%s)\n", chain);
+            optionFile << strprintf("Name=ConbiniCoin (%s)\n", chain);
         optionFile << "Exec=" << pszExePath << strprintf(" -min -testnet=%d -regtest=%d\n", GetBoolArg("-testnet", false), GetBoolArg("-regtest", false));
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";
@@ -806,7 +806,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
 LSSharedFileListItemRef findStartupItemInList(LSSharedFileListRef list, CFURLRef findUrl);
 LSSharedFileListItemRef findStartupItemInList(LSSharedFileListRef list, CFURLRef findUrl)
 {
-    // loop through the list of startup items and try to find the litecoinz app
+    // loop through the list of startup items and try to find the conbinicoin app
     CFArrayRef listSnapshot = LSSharedFileListCopySnapshot(list, NULL);
     for(int i = 0; i < CFArrayGetCount(listSnapshot); i++) {
         LSSharedFileListItemRef item = (LSSharedFileListItemRef)CFArrayGetValueAtIndex(listSnapshot, i);
@@ -851,7 +851,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
     LSSharedFileListItemRef foundItem = findStartupItemInList(loginItems, bitcoinAppUrl);
 
     if(fAutoStart && !foundItem) {
-        // add litecoinz app to startup item list
+        // add conbinicoin app to startup item list
         LSSharedFileListInsertItemURL(loginItems, kLSSharedFileListItemBeforeFirst, NULL, NULL, bitcoinAppUrl, NULL, NULL);
     }
     else if(!fAutoStart && foundItem) {

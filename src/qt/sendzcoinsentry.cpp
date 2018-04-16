@@ -48,9 +48,9 @@ SendZCoinsEntry::SendZCoinsEntry(const PlatformStyle *platformStyle, QWidget *pa
     ui->addAsLabel->setPlaceholderText(tr("Enter a label for this address to add it to your address book"));
 #endif
 
-    // normal litecoinz address field
+    // normal conbinicoin address field
     GUIUtil::setupAddressWidget(ui->payTo, this);
-    // just a label for displaying litecoinz address(es)
+    // just a label for displaying conbinicoin address(es)
     ui->payTo_is->setFont(GUIUtil::fixedPitchFont());
 
     // Connect signals
@@ -116,7 +116,7 @@ void SendZCoinsEntry::clear()
     ui->payTo_s->clear();
     ui->payAmount_s->clear();
 
-    // update the display unit, to not use the default ("LTZ")
+    // update the display unit, to not use the default ("CONBINI")
     updateDisplayUnit();
 }
 

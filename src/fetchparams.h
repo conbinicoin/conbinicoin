@@ -1,9 +1,9 @@
-// Copyright (c) 2017-2018 The LitecoinZ developers
+// Copyright (c) 2017-2018 The LitecoinZ and ConbiniCoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef LITECOINZ_FETCHPARAMS_H
-#define LITECOINZ_FETCHPARAMS_H
+#ifndef CONBINICOIN_FETCHPARAMS_H
+#define CONBINICOIN_FETCHPARAMS_H
 
 #if defined(HAVE_CONFIG_H)
 #include "config/bitcoin-config.h"
@@ -11,7 +11,7 @@
 
 #include <string>
 
-void LTZ_VerifyParams(std::string file, std::string sha256expected);
-void LTZ_FetchParams(std::string url, std::string file);
+void CONBINI_VerifyParams(std::string file, std::string sha256expected);
+void CONBINI_FetchParams(std::string url, std::string file);
 
-#endif // LITECOINZ_FETCHPARAMS_H
+#endif // CONBINICOIN_FETCHPARAMS_H
